@@ -74,3 +74,10 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+*.s
+
+# Python
+.idea/*
+venv/*
+__pycache__/*
