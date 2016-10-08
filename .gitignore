@@ -81,3 +81,8 @@ $RECYCLE.BIN/
 .idea/*
 venv/*
 __pycache__/*
+
+
+# SAS
+*.sas7bdat
+*.doc

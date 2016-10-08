@@ -1,0 +1,43 @@
+数据库	文件夹
+数据集	文件
+
+libname 制定永久库的库标记
+Libname course 'E:\Course';/* 'E:Course' 用于指定逻辑库关联的物理路径 */
+
+# sas数据集的创建
+* viewtable 表编辑器
+* data步
+	* 数据输入格式
+		* 自由式 input name$ a b
+		* 列格式 input name$1-10 x1 12-15
+		* 有格式 input names$5. x1 3.1
+		* 命名式 input name=$ x1=
+
+
+# data步
+```
+data ;
+input;
+cards;
+1 11 1
+;
+```
+## data导入
+```
+PROC IMPORT OUT= WORK.data 
+            DATAFILE= "E:\sas\sasProgFile\c2\data\inport.csv" 
+            DBMS=CSV REPLACE;
+     GETNAMES=YES;
+     DATAROW=2; 
+RUN;
+
+```
+## data导出
+```
+PROC EXPORT DATA= WORK.T 
+            OUTFILE= "E:\sas\sasProgFile\c2\data\export.csv" 
+            DBMS=CSV REPLACE;
+     PUTNAMES=YES;
+RUN;
+```
+## 

@@ -1,0 +1,56 @@
+1                                                             SAS 系统                        2016年10月08日 星期六 下午02时39分41秒
+
+NOTE: 无法打开 SASUSER.REGSTRY。系统将改为打开 WORK.REGSTRY。
+NOTE: 所有注册表的更改将在会话结束后丢失。
+
+WARNING: 无法将 SASUSER 注册表复制到 WORK 注册表中。因此在该会话过程中，您不会看到注册表定制情况。
+NOTE: 无法打开 SASUSER.PROFILE。系统将改为打开 WORK.PROFILE。
+NOTE: 所有配置文件的更改将在会话结束后丢失。
+NOTE: Copyright (c) 2002-2010 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.3 (TS1M2 DBCS3060) 
+      Licensed to SCHOOL OF ECONOMICS & MANAGEMENT SHANXI UNIVERSITY, Site 11203719.
+NOTE: 该会话正在平台 W32_7PRO  上执行。
+
+
+
+NOTE: Enhanced analytical products:
+
+SAS/STAT 12.1, SAS/ETS 12.1
+
+NOTE: “SAS 初始化”所用时间:
+      实际时间          2.10 秒
+      CPU 时间          0.21 秒
+      
+1          data class;
+2          input sex$ chinese maths english @@;
+3          if sex='m' then
+4          do;
+5          total = chinese+maths+english;
+6          n+1;
+7          end;
+8          ave = sum(chinese+maths+english)/3;
+9          cards;
+
+NOTE: INPUT 语句到达一行的末尾，SAS 已转到新的一行。
+NOTE: 数据集 WORK.CLASS 有 7 个观测和 7 个变量。
+NOTE: “DATA 语句”所用时间（总处理时间）:
+      实际时间          0.23 秒
+      CPU 时间          0.01 秒
+      
+
+12         ;
+13         proc print;
+14         run;
+
+NOTE: 从数据集 WORK.CLASS. 读取了 7 个观测
+NOTE: PROCEDURE PRINT 已打印第 1 页。
+NOTE: “PROCEDURE PRINT”所用时间（总处理时间）:
+      实际时间          0.45 秒
+      CPU 时间          0.06 秒
+      
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: “SAS 系统”所用时间:
+      实际时间          3.15 秒
+      CPU 时间          0.31 秒
+      
