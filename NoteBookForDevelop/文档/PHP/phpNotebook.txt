@@ -1,0 +1,170 @@
+# php语法
+# 编码
+declare(encoding='UTF-8'); //定义多个命名空间和不包含在命名空间中的代码
+## 变量 $x
+
+* 作用域
+	* local
+	* global
+	* static
+	* parameter
+全局变量存储在$GLOBAL[index]中
+
+## php魔术变量
+__LINE__ 文件中的当前行号。
+__FILE__ 文件的完整路径和文件名。
+__DIR__ 文件所在的目录
+__FUNCTION__ 函数名称（PHP 4.3.0 新加）
+__CLASS__ 类的名称（PHP 4.3.0 新加）
+__TRAIT__ Trait 的名字（PHP 5.4.0 新加）
+__METHOD__ 类的方法名（PHP 5.0.0 新加）
+__NAMESPACE__ 当前命名空间的名称（区分大小写）
+
+## 常量 是全局的
+
+define("W","Welcome!");
+## [php超级全局变量](http://www.runoob.com/php/php-superglobals.html)
+
+$GLOBALS  全部变量的全局组合数组
+[$_SERVER](http://www.runoob.com/php/php-superglobals.html)
+
+$_REQUEST 收集HTML表单提交的数据
+$_POST
+$_GET
+$_FILES
+$_ENV
+$_COOKIE
+$_SESSION
+
+## 数据类型
+
+* String Integer Float Boolean Array Object NULL;
+
+* 数组
+
+```
+$x = array("aa","bb");
+echo $x[1];
+
+count($array);
+
+关联数组
+$age = array("Peter"=>"35", "Ben"=>37);
+
+遍历关联数组
+foreach($age as $x=>$x_value){
+echo "$x $x_value", "<br>";
+}
+
+数组排序函数
+sort rsort asort ksort arsort krsort
+
+```
+
+* 对象
+
+```
+class Car {
+	var $color;
+	function Car($color="green"){
+		$this->color = $color;
+	}
+    function __construct(){} //构造函数
+    function Car(){}// 构造函数
+    function __destruct(void){}
+	function what_color(){
+		return $this->color;
+	}
+}
+$obj = new Car();
+$obj->what_color();
+
+类使用 class 关键字后加上类名定义。
+类名后的一对大括号({})内可以定义变量和方法。
+类的变量使用 var 来声明, 变量也可以初始化值。
+函数定义类似 PHP 函数的定义，但函数只能通过该类及其实例化的对象访问。
+
+继承 extends 不支持多继承
+
+访问控制
+public（公有）：公有的类成员可以在任何地方被访问。
+protected（受保护）：受保护的类成员则可以被其自身以及其子类和父类访问。
+private（私有）：私有的类成员则只能被其定义所在的类访问。
+
+属性的访问控制
+类属性必须定义为公有，受保护，私有之一。如果用 var 定义，则被视为公有。
+
+方法的访问控制
+类中的方法可以被定义为公有，私有或受保护。如果没有设置这些关键字，则该方法默认为公有。
+
+接口 interface i{}同java
+
+static
+class A{
+    function A(){
+        echo "init a <br>";
+    }
+}
+class B extends A{
+    function B(){
+        A::A();//调用父类的构造函数，类似java的super
+    }
+}
+
+echo new B;
+
+调用父类构造方法
+parent::__construct();
+
+```
+## 命名空间
+* namespase test;
+* 子命名空间 namespase test\t;
+use My\Full\Classname as Another;
+
+* 导入模块 include ;
+## php 置并运算
+
+```
+echo "asdf","asdf";
+
+## 函数
+
+```
+function t($x){
+	echo "aa$x";
+}
+```
+```
+strlen(); // 计算 字符串的长度
+strpos(); // 查找字符 或 字符串
+htmlspecialchars() 把一些预定义的字符转换为 HTML 实体
+trim() 函数去除用户输入数据中不必要的字符 (如：空格，tab，换行)。
+stripslashes()函数去除用户输入数据中的反斜杠 (\)
+
+int preg_match ( string $pattern , string $subject [, array $matches [, int $flags ]] )：检测 name 字段是否包含字母和空格：
+if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+  $nameErr = "只允许字母和空格";
+}
+
+
+
+数组排序函数
+sort升序 rsort降序 asort根据关联数组的值升序 ksort根据关联数组的键升序 arsort关联数组值降序 krsort关联数组的键降序
+```
+
+# php控制流
+```
+和c语言的一样
+```
+
+# cookie
+设置cookie setcookie(name, value, expire, path, domain);
+取得cookie $_COOKIE["user"]
+isset($_COOKIE["user"])
+删除cookie setcookie("user", "", time()-3600);
+# session
+session_start();
+存储session数据：$_SESSION['views']=1;
+访问session数据：$_SESSION['views']
+销毁session： unset($_SESSION['views'])  session_destroy();

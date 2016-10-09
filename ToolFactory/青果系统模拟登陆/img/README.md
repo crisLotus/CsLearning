@@ -1,0 +1,1 @@
+http://myportal.sxu.edu.cn/attachmentDownload.portal?notUseCache=true&type=userPhoto&ownerId=2014083005

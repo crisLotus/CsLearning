@@ -1,0 +1,8 @@
+*.gif
+*.zip
+*.pyc
+do.php
+data.txt
+target.txt
+h/
+__pycache__/*

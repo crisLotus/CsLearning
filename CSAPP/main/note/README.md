@@ -1,0 +1,1 @@
+arguments 检测main函数参数
