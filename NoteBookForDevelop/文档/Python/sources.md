@@ -1,1 +1,2 @@
-[学习python 11个优秀资源](https://zhuanlan.zhihu.com/p/21464202)
+* [瀛︿範python 11涓紭绉�璧勬簮](https://zhuanlan.zhihu.com/p/21464202)
+* [python 璁捐妯″紡瀹炵幇](https://github.com/gennad/Design-Patterns-in-Python)
