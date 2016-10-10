@@ -1,26 +1,17 @@
-[前端知识体系](http://my.oschina.net/hxwny/blog/499513)
-
-[前端学习](https://github.com/qiu-deqing/FE-learning)
-
-[前端资源](https://github.com/JacksonTian/fks)
-
-[bootstrap](http://www.zhihu.com/question/37946473/answer/93067448)
-
-[adminlte bootstrap](https://www.almsaeedstudio.com/themes/AdminLTE/documentation/index.html)
-
-[almsaeed studio](https://www.almsaeedstudio.com/)
-
-[css组件库](http://www.uibox.in/)
-
-[**菜鸟教程css**](http://www.runoob.com/css/css-positioning.html)
-
-[**CSS 实例**](http://www.runoob.com/css/css-examples.html)
-
-[html css 入门](http://edu.51cto.com/index.php?do=lession&id=55960)
-
-[html5/css3响应式布局介绍及设计流程](http://www.51xuediannao.com/html+css/htmlcssjq/694.html)
+* [前端知识体系](http://my.oschina.net/hxwny/blog/499513)
+* [前端学习](https://github.com/qiu-deqing/FE-learning)
+* [前端资源](https://github.com/JacksonTian/fks)
+* [bootstrap](http://www.zhihu.com/question/37946473/answer/93067448)
+* [adminlte bootstrap](https://www.almsaeedstudio.com/themes/AdminLTE/documentation/index.html)
+* [almsaeed studio](https://www.almsaeedstudio.com/)
+* [css组件库](http://www.uibox.in/)
+* [**菜鸟教程css**](http://www.runoob.com/css/css-positioning.html)
+* [**CSS 实例**](http://www.runoob.com/css/css-examples.html)
+* [html css 入门](http://edu.51cto.com/index.php?do=lession&id=55960)
+* [html5/css3响应式布局介绍及设计流程](http://www.51xuediannao.com/html+css/htmlcssjq/694.html)
 
 # CSS文档结构
+* CSS文档结构
   - 一般样式
     * 主体样式
     * reset样式
@@ -203,6 +194,7 @@
 动画
 多列布局
 用户界面
+
 ## 通过盒模型布局
 [深入理解 CSS3 弹性盒布局模型](http://www.ibm.com/developerworks/cn/web/1409_chengfu_css3flexbox/)
 * display: flex;

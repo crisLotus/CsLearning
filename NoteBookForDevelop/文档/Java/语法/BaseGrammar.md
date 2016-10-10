@@ -45,9 +45,11 @@ instanceOf 运算符
 ```
 
 ## Java标识符
+
 * 所有的标识符都应该以字母（A-Z或者a-z）,美元符（$）、或者下划线开始
 
 ## Java修饰符
+
 * 像其他语言一样，Java可以使用修饰符来修饰类中方法和属性。
 主要有两类修饰符：
   - 可访问修饰符 : default, public , protected, private
@@ -55,11 +57,14 @@ instanceOf 运算符
 
 
 ## Java变量
+
 Java中主要有如下几种类型的变量
 局部变量
 类变量（静态变量）
 成员变量（非静态变量）
+
 ## Java枚举
+
 Java 5.0引入了枚举，枚举限制变量只能是预先设定好的值。使用枚举可以减少代码中的bug。
 ```
 class FreshJuice {
@@ -91,6 +96,7 @@ abstract class AbstractClass {
 ```
 
 ## interface
+
 [可见度] interface 接口名称 [extends 其他的interface名] {
         // 声明变量
         // 抽象方法
@@ -108,6 +114,7 @@ abstract class AbstractClass {
   - 接口支持多重继承。
 
 ```
+
 interface SuperInterface {
   final static int a=0; // 静态常量，永远不可变
 
@@ -126,9 +133,11 @@ class InterTest implements SubInterface, SuperInterface {
 ```
 
 ## package
+
 import payroll;
 
 ## Exception
+
 ```
 throws/throw关键字
 如果一个方法没有捕获一个检查性异常，那么该方法必须使用throws 关键字来声明。throws关键字放在方法签名的尾部。

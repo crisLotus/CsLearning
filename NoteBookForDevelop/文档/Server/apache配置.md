@@ -1,4 +1,4 @@
-# apache ¸ùÄ¿Â¼
-* ´´½¨×Ô¼ºĞèÒª¸ü¸ÄµÄĞÂÄ¿Â¼£¬²¢¸ü¸ÄËŞÖ÷È¨ÏŞÎªapacheÓÃ»§ chown -R apache:apache /mnt/www
-* ±à¼­  /etc/apache2/sites-enabled/000-default.conf £¬ÎªÏ£ÍûµÄÄ¿Â¼
-* ±à¼­ /etc/apache2/apache2.conf ¸ÄĞ´/Ä¿Â¼µÄÈ¨ÏŞÎª Allow from all
+# apache æ ¹ç›®å½•
+* åˆ›å»ºè‡ªå·±éœ€è¦æ›´æ”¹çš„æ–°ç›®å½•ï¼Œå¹¶æ›´æ”¹å®¿ä¸»æƒé™ä¸ºapacheç”¨æˆ· chown -R apache:apache /mnt/www
+* ç¼–è¾‘  /etc/apache2/sites-enabled/000-default.conf ï¼Œä¸ºå¸Œæœ›çš„ç›®å½•
+* ç¼–è¾‘ /etc/apache2/apache2.conf æ”¹å†™/ç›®å½•çš„æƒé™ä¸º Allow from all

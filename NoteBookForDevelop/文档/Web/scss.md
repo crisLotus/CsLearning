@@ -1,7 +1,10 @@
 # scss语法
-[scss](http://www.w3cplus.com/sassguide/)
-[Sass Guidelines 中文](http://wiki.jikexueyuan.com/project/sass-guidelines/)
 
+## 资源
+* [Scss](http://www.w3cplus.com/sassguide/)
+* [Sass Guidelines 中文](http://wiki.jikexueyuan.com/project/sass-guidelines/)
+
+## 语法
 ```
 文件后缀名
 

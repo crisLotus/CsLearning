@@ -38,5 +38,5 @@ __init__(self,...)	 初始化对象，在创建新对象时调用
 ```
 
 没看完的内容
-https://my.oschina.net/motaixian/blog/290064
-http://www.pulpcode.cn/2016/05/28/python-class-bulidin-method/
+* https://my.oschina.net/motaixian/blog/290064
+* http://www.pulpcode.cn/2016/05/28/python-class-bulidin-method/

@@ -158,6 +158,7 @@ def get_info_sxu(stuid, paswd):
 
 
 if __name__ == '__main__':
+    print('识别率比较低，失败请重试：')
     stuid = input("学号：")
     paswd = input("密码：")
     get_info_sxu(stuid, paswd) # 增量遍历 '{:02d}'.format(i)： 00 01 02 ...
