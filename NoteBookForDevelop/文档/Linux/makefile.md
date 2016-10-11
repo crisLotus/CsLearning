@@ -17,10 +17,13 @@ $(P): $(OBJECTS)
 clean从来都是放在文件的最后
 
 # 简单语法
+
 ```
-target: prerequisites
-	command
+<target> : <prerequisites>
+[tab] <commands>
 ```
+书：[跟我一起写Makefile-陈皓](https://github.com/Nigelzhf/PelicanBlog/blob/develop/content/书/跟我一起写Makefile-陈皓.pdf)--[Download](https://github.com/Nigelzhf/PelicanBlog/raw/develop/content/%E4%B9%A6/%E8%B7%9F%E6%88%91%E4%B8%80%E8%B5%B7%E5%86%99Makefile-%E9%99%88%E7%9A%93.pdf)
+
 
 # make 中的变量
 objects = main.o kbd.o command.o display.o insert.o search.o files.o utils.o
@@ -72,5 +75,3 @@ cc -M main.c
 其输出是：
 main.o : main.c defs.h
 如果你使用GNU的C/C++编译器，你得用“-MM”参数，不然，“-M”参数会把一些标准库的头文件也包含进来。
-
-
