@@ -1,4 +1,5 @@
 # win平台
+
 * [2014年Windows平台软件推荐：神器小工具（骨灰级）](http://www.tuicool.com/articles/fy2EnqJ)
 * 微信 你懂的
 * [Vagrant](https://www.vagrantup.com/) 虚拟机管理工具，用于搭建跨平台测试环境 配合virtualbox或vmare
@@ -20,8 +21,8 @@
 * [程序员高效率工作工具推荐（必备工具）](http://m.blog.csdn.net/article/details?id=41697895)
 * [psr.exe]() win自带的操作步骤记录器
 
-
 # linux平台
+
 * linux基本命令
 * Atom github出品编辑器
 * Git 版本控制

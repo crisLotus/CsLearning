@@ -66,6 +66,12 @@
         + a:visited {color:#00FF00;}    /* 已访问的链接 */
         + a:hover {color:#FF00FF;}      /* 鼠标划过链接 */
         + a:active {color:#0000FF;}     /* 已选中的链接 */
+```
+a:link {color:#FF0000;}
+a:visited {color:#00FF00;}
+a:hover {color:#FF00FF;}
+a:active {color:#0000FF;}
+```
     - CSS - :first-child伪类
         ```
             <html>
