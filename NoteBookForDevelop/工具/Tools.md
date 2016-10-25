@@ -16,6 +16,8 @@
 * Veracrypt 磁盘加密 虚拟磁盘加密工具
 * 网易云音乐
 * IrfanView 图片查看软件 中文
+* [LICEcap](http://www.cockos.com/licecap/):录屏成gif图
+* [markdown--typora](http://www.typora.io/#windows)
 * 静网大师 视频去广告
 * [dash](https://upclinux.github.io/intro/07/docset/) 参考手册工具
 * [程序员高效率工作工具推荐（必备工具）](http://m.blog.csdn.net/article/details?id=41697895)
