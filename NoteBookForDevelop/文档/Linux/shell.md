@@ -1,7 +1,9 @@
-[shell编程菜鸟教程](http://www.runoob.com/linux/linux-shell.html)
-
-[shell编程：c语言中文网](http://c.biancheng.net/cpp/view/6994.html)
-
+* [shell编程菜鸟教程](http://www.runoob.com/linux/linux-shell.html)
+* [shell编程：c语言中文网](http://c.biancheng.net/cpp/view/6994.html)
+## 常用标量
+* stdin 0
+* stdout 1
+* stderr 2
 
 ## 变量
 
@@ -292,6 +294,8 @@ n >> file	将文件描述符为 n 的文件以追加的方式重定向到 file�
 n >& m	将输出文件 m 和 n 合并。
 n <& m	将输入文件 m 和 n 合并。
 << tag	将开始标记 tag 和结束标记 tag 之间的内容作为输入。
+
+pgrep -x httpd >/dev/null 2>&1 # 将标准输出重定向到null，标准错误输出重定向到输出
 ```
 
 ## 文件包含

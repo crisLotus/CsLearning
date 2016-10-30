@@ -1,5 +1,5 @@
 # Bash
-
+[Linux命令大全](http://man.linuxde.net/grep)
 ```
 vi/emac/nano
 find -name *.sh      find -iname *.sh
