@@ -18,6 +18,8 @@ interface Demo {
 	void method1(); 
 	void method2();
 } 
+implements
+extends
 
 在abstract class方式中，
 	Demo可以有自己的数据成员

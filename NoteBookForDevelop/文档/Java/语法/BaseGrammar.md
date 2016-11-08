@@ -1,7 +1,9 @@
 [Java 语言快速入门  极客学院](http://wiki.jikexueyuan.com/project/java/)
 
 base grammar:
+
 ## 基本语法
+
 编写Java程序时，应注意以下几点：
 - 大小写敏感：Java是大小写敏感的，这就意味着标识符Hello与hello是不同的。
 - 类名：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 MyFirstJavaClass 。
@@ -10,13 +12,15 @@ base grammar:
 - 主方法入口：所有的Java 程序由public static void main(String []args)方法开始执行。
 
 ## java数据类型
+
 Java语言提供了八种基本类型。六种数字类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型。
 **byte short int long float double boolean char**
 每一种基本数据类型还存在其相应的包装类
 
-**前缀0表示8进制，而前缀0x代表16进制**
+**前缀0表示8进制，而前缀0x代表16进制**
 * 引用类型 Site site = new Site("Runoob")
 * Java常量 final double PI = 3.1415927;
+
 ```
 符号	字符含义
 \n	换行 (0x0a)
@@ -33,12 +37,13 @@ Java语言提供了八种基本类型。六种数字类型（四个整数型，�
 ```
 
 ## java 运算符
+
 ```
 ％	取模 - 右操作数除左操作数的余数	B%A等于0
 ＆	按位与操作符，当且仅当两个操作数的某一位都非0时候结果的该位才为1。	（A＆B），得到12，即0000 1100
 |	按位或操作符，只要两个操作数的某一位有一个非0时候结果的该位就为1。	（A | B）得到61，即 0011 1101
 ^	按位异或操作符，两个操作数的某一位不相同时候结果的该位就为1。	（A ^ B）得到49，即 0011 0001
-~	按位补运算符翻转操作数的每一位。	（〜A）得到-61，即1100 0011
+~	按位补运算符翻转操作数的每一位。	（~A）得到-61，即1100 0011
 
 条件运算符（?:）
 instanceOf 运算符
@@ -54,7 +59,6 @@ instanceOf 运算符
 主要有两类修饰符：
   - 可访问修饰符 : default, public , protected, private
   - 不可访问修饰符 : final, abstract, strictfp
-
 
 ## Java变量
 
@@ -134,6 +138,7 @@ class InterTest implements SubInterface, SuperInterface {
 
 ## package
 
+package pkg1[．pkg2[．pkg3…]];
 import payroll;
 
 ## Exception

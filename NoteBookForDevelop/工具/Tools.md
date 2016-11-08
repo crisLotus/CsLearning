@@ -22,6 +22,9 @@
 * [dash](https://upclinux.github.io/intro/07/docset/) 参考手册工具
 * [程序员高效率工作工具推荐（必备工具）](http://m.blog.csdn.net/article/details?id=41697895)
 * [psr.exe]() win自带的操作步骤记录器
+* api调试工具
+	* [httpie](https://httpie.org/docs)
+	* [postman](https://www.getpostman.com)
 
 # linux平台
 
