@@ -23,6 +23,8 @@ create database <数据库名>;
 drop database <数据库名>;
 use <数据库名>;
 describe  <表名>;
+
+备份数据库 mysqldump.exe -u root -p --databases test test2 > file.sql
 ```
 
 # 数据类型

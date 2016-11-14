@@ -19,6 +19,7 @@
 # 常用命令
 
 1. df ps -e free  磁盘 正运行程序 内存使用情况
+* ssh user@host
 * ps lf 输出进程状态和进程间关系
 * lsblk -t  或者 /sys/block/<磁盘名>/queue/scheduler 显示磁盘
 * fork exec 
