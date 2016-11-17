@@ -1,30 +1,43 @@
 # win平台
 
 * [2014年Windows平台软件推荐：神器小工具（骨灰级）](http://www.tuicool.com/articles/fy2EnqJ)
-* 微信 你懂的
+* [程序员高效率工作工具推荐（必备工具）](http://m.blog.csdn.net/article/details?id=41697895)
 * [Vagrant](https://www.vagrantup.com/) 虚拟机管理工具，用于搭建跨平台测试环境 配合virtualbox或vmare
 * VirtualBox
+* **sublime text**
+* pycharm
+* eclipse
+* koala
+* starUML
+* meld : diff图形界面
+* git
+* SourceTree git的图形界面
 * Cmder win下cmd的替代品，分portable版(portable版内置git)和mini版
-* [total uninstall](http://www.appcgn.com/total-uninstall-pro.html)
-* [VMware ThinApp 4.7.3绿色版 - 单文件软件、便携软件制作工具](http://www.portablesoft.org/vmware-thinapp/)
 * putty ssh远程登陆工具
+* shadowsocks
 * Clover 让资源管理器像chrome一样分标签
 * Fidder http协议分析
-* SourceTree git的图形界面
 * Wireshark 网络抓包工具（官方支持中文界面）
+* xampp+mysqlWorkbench
 * AxureRP
 * Veracrypt 磁盘加密 虚拟磁盘加密工具
-* 网易云音乐
 * IrfanView 图片查看软件 中文
-* [LICEcap](http://www.cockos.com/licecap/):录屏成gif图
+* [LICEcap](http://www.cockos.com/licecap/):录屏gif图
 * [markdown--typora](http://www.typora.io/#windows)
-* 静网大师 视频去广告
 * [dash](https://upclinux.github.io/intro/07/docset/) 参考手册工具
-* [程序员高效率工作工具推荐（必备工具）](http://m.blog.csdn.net/article/details?id=41697895)
 * [psr.exe]() win自带的操作步骤记录器
 * api调试工具
 	* [httpie](https://httpie.org/docs)
 	* [postman](https://www.getpostman.com)
+* [VMware ThinApp 4.7.3绿色版 - 单文件软件、便携软件制作工具](http://www.portablesoft.org/vmware-thinapp/)
+* [total uninstall](http://www.appcgn.com/total-uninstall-pro.html)
+* 完美解码
+* 百度云
+* sumetraPDF
+* adobe
+* 网易云音乐
+* 微信 你懂的
+* 静网大师 视频去广告
 
 # linux平台
 
