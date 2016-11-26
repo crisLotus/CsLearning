@@ -1,3 +1,9 @@
+# log
+## 文件结构
+* csapp 部分答案
+* linux linux下实现的demo
+* main自己实验的是写的代码
+
 # csappCodeHomeWork
 csapp 代码
 

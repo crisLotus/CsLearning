@@ -6,7 +6,8 @@
 * ToolFactory	整理的工具
 
 # log
-* init
-* update: <...>
-* fixbug: <...>
-* addfeature <...>
+
+* features:	new features are only added to the default branch, this branch accepts any kind of change.
+* bugfix:	bugfixes and security fixes are accepted, new binaries are still released.
+* security:	only security fixes are accepted and no more binaries are released, but new source-only versions can be released
+* end-of-life:	branch no longer maintained; no more changes can be pushed to this branch.
