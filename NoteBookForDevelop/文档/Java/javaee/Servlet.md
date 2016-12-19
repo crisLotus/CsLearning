@@ -4,7 +4,6 @@
 改配置文件 @WebServlet ServletContext.addServlet
 改配置文件 @WebFilter ServletContext.addFilter
 改配置文件 @WebListener ServletContext.addListener
-
 ```
 
 # Servlet异步支持
@@ -18,7 +17,7 @@ public class WelcomeServlet extends HttpServlet {
 	throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf8");
 		PrintWriter out = response.getWriter();
-		out.println("啊儿童和体验");
+		out.println("tttttt");
 	}
 }
 ```
@@ -40,13 +39,13 @@ public class WelcomeServlet extends HttpServlet {
 ```
 改配置文件 @WebServlet ServletContext.addServlet
 ```
-
 # 获得各种内建变量
 ```
 PrintWriter out = response.getWriter()
 HttpSession session = request.getSession()
 ServletContext application = this.getServletContext()
 ```
+
 # 获取配置参数
 ```
 String str = application.getInitParameter("Paramete-name");
