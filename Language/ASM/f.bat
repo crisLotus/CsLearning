@@ -1,1 +1,1 @@
-cd chapter6
+cd practice\3

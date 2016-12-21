@@ -13,38 +13,41 @@
 0020:0070  2A 2A 2A 2A 2A 2A 2A 2A-2A 2A 2A 2A 2A 2A 2A 00  ****************.
 
 times = 8
-x = 1 % *的个数
+x = 1 ； *的个数
 x = x+2
-y = 9 % 循环行数
+y = 9 ;循环行数
 y = y-1
 
-mov es,0020h
-cx = 8
-mov ds:[0],1  % x = 1
-mov ds:[2],7  & y = 7
+start:	
+	;init registor
+	;mov ax,codesg
+	;mov cs,ax
+	mov ax,datasg
+	mov ds,ax	;ds:datasg
+	mov ax,stacksg
+	mov ss,ax	;ss:stacksg
+	mov sp,22h	;sp:22h
+	mov ax,0020h
+	mov es,ax	;es:0020h
+	
+	cx = 8
+	x = 1 每行*的个数
+	y = 7
 a:
 	push cx
 	cx = x
-
-	mov bx,y
+	bx = y
 	b:
 		mov al,'*'
 		mov es:[bx],al
-		add bx,1	% bx = bx + 2
+		bx = bx + 1
 	loop b
 
-	mov ax,de
-	add ax,1h
-	mov es,ax
+	es = es + 1
 	pop cx
-	mov ax,ds:[2]  % y = y - 1
-	sub ax,1
-	mov ds:[2],ax
-	
-	mov ax,ds:[0]  % x = x + 2 
-	add ax,2
-	mov ds,ax 
-loop
+	y = y - 1
+	x = x + 2  
+loop a
 
 
 二、编程实现如附件demo.mp4的效果。

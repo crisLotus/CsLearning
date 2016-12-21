@@ -19,7 +19,14 @@ str.format()
 	* '{0:10} ==> {1:10d}'.format(name, phone)
 repr() str()  生成解释器可读   生成人易读
 # 异常处理
-	
+try:
+    result = x / y
+except ZeroDivisionError:
+    print("division by zero!")
+else:
+    print("result is", result)
+finally:
+    print("executing finally clause")
 # class
 	类变量 在类中定义 						-所有实例共享
 	实例变量 在 __init__(self)中定义 	-一个实例访问

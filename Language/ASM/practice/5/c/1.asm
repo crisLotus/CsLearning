@@ -9,7 +9,7 @@ start:
 	mov ds,ax	;ds:datasg
 	mov ax,stacksg
 	mov ss,ax	;ss:stacksg
-	mov sp,22h	;sp:22h
+	mov sp,20h	;sp:20h
 	mov ax,0020h
 	mov es,ax	;es:0020h
 	

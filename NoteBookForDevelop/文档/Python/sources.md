@@ -1,4 +1,5 @@
 * [awesome-python](https://github.com/vinta/awesome-python)
+* [python手册](http://docs.pythontab.com/python/python3.4/index.html)
 * [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
 * [学习python 11个优秀资源](https://zhuanlan.zhihu.com/p/21464202)
 * [python 设计模式实现](https://github.com/gennad/Design-Patterns-in-Python)
