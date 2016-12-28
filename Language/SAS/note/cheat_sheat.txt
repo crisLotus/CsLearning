@@ -1,12 +1,32 @@
+# è°ƒè¯• put
+# æ•°ç»„P79
+```
+array c{4}cost price profit income;
+array score{10,7}x1-x70	/*äºŒç»´æ•°ç»„*/
 
-# Ñ­»·
+c(1)/*è®¿é—®*/
+```
+# å‡½æ•°P50
+# where P60
+# IF
+```
+if condition then statement;else statement;
+if condition then
+	do;
+	...
+	end;
+else statement;
+if expression;
 
-/* Óï¾ä¿é */
+```
+# å¾ªç¯P66
+
+/* è¯­å¥å— */
 do;
 ...
 end;
 
-/* Ñ­»· */
+/* å¾ªç¯ */
 do i=0 to 5 by 1;
 ...
 end;
@@ -29,9 +49,14 @@ end;
 /*  */
 do over
 
-# ÎÄ¼ş²Ù×÷
-Êı¾İºÏ²¢ 
-	×İÏòºÏ²¢ set append  
-	ºáÏòºÏ²¢ merge
+# æ–‡ä»¶æ“ä½œ
+æ•°æ®åˆå¹¶ P71
+	çºµå‘åˆå¹¶ set append  
+	æ¨ªå‘åˆå¹¶ merge
 /* set */
 set 
+
+# è¿‡ç¨‹
+```
+proc P85
+```

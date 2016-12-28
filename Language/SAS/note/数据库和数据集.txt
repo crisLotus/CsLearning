@@ -1,20 +1,20 @@
-Êı¾İ¿â	ÎÄ¼ş¼Ğ
-Êı¾İ¼¯	ÎÄ¼ş
+æ•°æ®åº“ æ–‡ä»¶å¤¹
+æ•°æ®é›† æ–‡ä»¶
 
-libname ÖÆ¶¨ÓÀ¾Ã¿âµÄ¿â±ê¼Ç
-Libname course 'E:\Course';/* 'E:Course' ÓÃÓÚÖ¸¶¨Âß¼­¿â¹ØÁªµÄÎïÀíÂ·¾¶ */
+libname åˆ¶å®šæ°¸ä¹…åº“çš„åº“æ ‡è®°
+Libname course 'E:\Course';/* 'E:Course' ç”¨äºæŒ‡å®šé€»è¾‘åº“å…³è”çš„ç‰©ç†è·¯å¾„ */
 
-# sasÊı¾İ¼¯µÄ´´½¨
-* viewtable ±í±à¼­Æ÷
-* data²½
-	* Êı¾İÊäÈë¸ñÊ½
-		* ×ÔÓÉÊ½ input name$ a b
-		* ÁĞ¸ñÊ½ input name$1-10 x1 12-15
-		* ÓĞ¸ñÊ½ input names$5. x1 3.1
-		* ÃüÃûÊ½ input name=$ x1=
+# sasæ•°æ®é›†çš„åˆ›å»º
+* viewtable è¡¨ç¼–è¾‘å™¨
+* dataæ­¥
+    * æ•°æ®è¾“å…¥æ ¼å¼
+        * è‡ªç”±å¼ input name$ a b
+        * åˆ—æ ¼å¼ input name$1-10 x1 12-15
+        * æœ‰æ ¼å¼ input names$5. x1 3.1
+        * å‘½åå¼ input name=$ x1=
 
 
-# data²½
+# dataæ­¥
 ```
 data ;
 input;
@@ -22,7 +22,7 @@ cards;
 1 11 1
 ;
 ```
-## dataµ¼Èë
+## dataå¯¼å…¥
 ```
 PROC IMPORT OUT= WORK.data 
             DATAFILE= "E:\sas\sasProgFile\c2\data\inport.csv" 
@@ -32,7 +32,7 @@ PROC IMPORT OUT= WORK.data
 RUN;
 
 ```
-## dataµ¼³ö
+## dataå¯¼å‡º
 ```
 PROC EXPORT DATA= WORK.T 
             OUTFILE= "E:\sas\sasProgFile\c2\data\export.csv" 

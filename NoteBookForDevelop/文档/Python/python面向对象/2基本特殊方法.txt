@@ -1,0 +1,5 @@
+# __init__()
+# __repr__(), __str__(), __format__() == repr(), str(), format()
+# __hash__()
+# __bool__()
+

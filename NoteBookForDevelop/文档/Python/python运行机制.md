@@ -1,5 +1,5 @@
 # __base__ __class__ __main__ __mro__ __dict__
-```
+```python
 # coding:utf-8
 class A:
     def a(self):
