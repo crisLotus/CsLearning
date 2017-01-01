@@ -1,6 +1,9 @@
 assume cs:code
 
-;字母大写变小写，小写变大写
+;;
+;; author: exfly
+;; 字母大写变小写，小写变大写
+;;
 
 data segment
      db 'HeBEInOnGYedAxUeDAAsSemBLylaNGuAGE'  ;共34个字节

@@ -1,4 +1,10 @@
 assume cs:code,ds:data
+
+;;
+;; author: exfly
+;; 没有返回语句却正常退出
+;;
+
 data segment
 
   db 184,0,76,205,33
