@@ -1,1 +1,1 @@
-cd chapter8
+cd practice

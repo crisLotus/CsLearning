@@ -23,7 +23,12 @@ start:
 		mov cx,10000000b
 		add dx,1
 		add ax,dx
-		and cx,ax
+		
+		mov cx,ax
+		sub cx,122
+		
+		and cx,1000000000000000b
+		sub cx,1000000000000000b
 		add cx,1
 		loop endloop
 		

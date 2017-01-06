@@ -1,7 +1,7 @@
 assume cs:code,ds:data,ss:stack
 ;;
 ;; author: exfly
-;; 灏哾ata segment涓殑澶у啓瀛楁瘝杞皬
+;; 将data segment中的大写字母转小
 ;;
 data segment
     db 'WELCOME TO MASM!'

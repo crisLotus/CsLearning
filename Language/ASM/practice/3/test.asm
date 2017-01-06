@@ -9,21 +9,22 @@ start:
 	mov ds,ax	;ds:datasg
 	mov ax,stacksg
 	mov ss,ax	;ss:stacksg
-	mov sp,22h	;sp:
-
+	mov sp,20h	;sp:
 	
-	mov ax,ds:[0]
-	mov dx,ds:[2]
-	mov bx,1442
-	div bx
+	mov ax,'a'
+	mov ax,'z'
+	mov ax,'A'
+	mov ax,'Z'
+	
+	
 	
 	mov ax,4c00h
 	int 21h
-
+	
 codesg ends
 
 datasg segment
-	dd 197514,0,0
+	dw 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 datasg ends
 
 stacksg segment

@@ -22,7 +22,8 @@ start:
 		;判断字母a的机制有问题
 		mov al,es:[si]
 		mov cx,'a'
-		add cx,ax
+		or cx,ax	;保留Aa
+		and cx,ax	;去掉A
 		sub cx,'a'
 		add cx,1
 		

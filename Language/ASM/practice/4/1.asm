@@ -27,7 +27,7 @@ start:
 	mov ds,ax	;ds:datasg
 	mov ax,stacksg
 	mov ss,ax	;ss:stacksg
-	mov sp,22h	;sp:
+	mov sp,20h	;sp:
 	
 	; bx si di
 	; a

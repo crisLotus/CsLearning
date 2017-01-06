@@ -19,7 +19,7 @@ class NextActivity ... {
 	public static void activityStart(Context context, data) {
 		Intent inten = new Intent(context, NextActivity.class);
 		intent.putExtra("data", data);
-		startActivity(intent);
+		context.startActivity(intent);
 	}
 }
 ```

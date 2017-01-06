@@ -15,7 +15,7 @@ data segment
 	dw 3,7,9,13,28,38,130,220,476,778,1001,1442,2258,2793,4037,5635,8226
 	dw 11542,14430,15257,17800
 data ends
-
+;197514 /1442
 table segment
 	db 21 dup ('year summ ne ?? ')
 	db 10h dup (0)
@@ -67,7 +67,11 @@ start:
 		loop loop1
 		pop cx
 		
+		;代码以下没有用到bx，故用bx随意改了
 		;[bp].0ah = 168[bx]
+		;mov ax,168[bx]
+		mov bx,es:[150h]
+		add bx,bx
 		mov ax,168[bx]
 		mov es:[bp].0ah,ax
 		
