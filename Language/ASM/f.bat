@@ -1,1 +1,1 @@
-cd practice
+cd holiday

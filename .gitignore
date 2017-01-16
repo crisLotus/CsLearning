@@ -79,7 +79,7 @@ $RECYCLE.BIN/
 *.s
 
 # Python
-.idea/*
+.idea/
 venv/*
 __pycache__/*
 
