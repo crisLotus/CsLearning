@@ -1,5 +1,5 @@
 #! -*- coding:utf-8 -*-
-import json
+import collections.abc
 i = 20
 
 
@@ -29,16 +29,16 @@ class TestFun:
         return str(self.__dict__)
 
 
+class SomeAppClass(collections.abc.Callable):
+    pass
+
+
 def main():
-    t = TestFun()
-    print(id(t))
-    print(hash(t))
-    print(str(t))
-    list()
+    assert(False)
 
 
 if __name__ == '__main__':
     main()
 
-    import doctest
-    doctest.testmod()
+    # import doctest
+    # doctest.testmod()

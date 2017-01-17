@@ -8,7 +8,7 @@ class People:
     def p(self):
         self.__p()
 
-    def __p(self):  
+    def __p(self):
         print(self.__test)
 
 if __name__ == '__main__':
