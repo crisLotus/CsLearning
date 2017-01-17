@@ -30,11 +30,24 @@ class TestFun:
 
 
 class SomeAppClass(collections.abc.Callable):
-    pass
+    def __call__(self, *args, **kwargs):
+        pass
+
+
+class IterTest:
+    def __init__(self):
+        self.list = list([1,2,3,4,5,6,7,8])
+    def __iter__(self):
+        for i in self.list:
+            yield i
+    def __str__(self):
+        return str(type(self)) + ' ' +self.__class__.__name__+ ' '+str(self.__dict__)
 
 
 def main():
-    assert(False)
+    print(str(IterTest()))
+    t = iter(IterTest())
+    print(next(t),next(t),next(t),next(t))
 
 
 if __name__ == '__main__':

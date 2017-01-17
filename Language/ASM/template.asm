@@ -9,8 +9,9 @@ start:
 	mov ds,ax	;ds:datasg
 	mov ax,stacksg
 	mov ss,ax	;ss:stacksg
-	mov sp,22h	;sp:
+	mov sp,0	;sp:
 	
+	mov ax,aa
 	
 	mov ax,4c00h
 	int 21h
@@ -18,11 +19,12 @@ start:
 codesg ends
 
 datasg segment
-	dw 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	;db 0ffffh dup (0)
+	aa dw 0,0,0,0,0
 datasg ends
 
 stacksg segment
-	dw 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	db 0ffffh dup (0)
 stacksg ends
 
 end start
