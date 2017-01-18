@@ -17,7 +17,7 @@
 
 * [requests作者的库，通过阅读代码提高感觉](https://github.com/kennethreitz)
 * [The Hitchhiker’s Guide to Python!](http://docs.python-guide.org/en/latest/)
-
+* [python正则](http://wiki.ubuntu.org.cn/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97)
 
 # python PEP
 * [PEP-index](https://www.python.org/dev/peps/)

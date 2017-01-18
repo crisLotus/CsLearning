@@ -38,7 +38,7 @@ start:
 	mov cx,34
 	print:
 	mov al,es:[si]
-	mov ah,01110001b ;ÂÌÉ«
+	mov ah,01110001b ;°×µ×Àº×Ö
 	mov ds:[bx+di],ax
 	add si,1
 	add di,2

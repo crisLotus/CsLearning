@@ -64,7 +64,57 @@ class A:
 class B(A):
     def __init__(self):
         pass
-``` 
+```
+# decorate 装饰器
+## 有用的方法方法
+@functools.wraps(func)  方便debug
+## 演示
+```python
+@decorate
+def function(*args, **kw):
+    pass
+内部执行过程
+function = decorate(function)
+
+使用@functools.wraps(func)，方便调试
+import functools
+def de(func):
+    @functools.wraps(func)
+    def t(*args, **kw):
+        return func(*args, **kw)
+    return t
+@de
+def test():
+    """DocStrings"""
+    print("func test(t)")
+test.__doc__ == 'DocStrings'
+
+# 创建类装饰器 log添加属性，memonto添加方法(不可以重载，故使用mixin)
+def log(class_):
+    class_.logger = logging.getLogger(class_.__qualname__)
+    return class_
+logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
+def memonto(class_):
+    def m(self):
+        print('m')
+    class_.m = m
+    return class_
+@memonto
+@log
+class DecorateTest:
+    def __init__(self):
+        self.logger.info('New instance')
+    def method(self):
+        pass
+
+# mixin机制
+创建一个类，由其他的类继承，这个过程就是mixin
+class Mixin:
+    def m(self):
+        print('m')
+class De(Mixin):
+    pass
+```
 # [PEP8 Python 编码规范整理](https://www.douban.com/note/134971609/)
     [编码结构](http://python.jobbole.com/84618/)
 

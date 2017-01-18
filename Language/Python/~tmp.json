@@ -1,0 +1,59 @@
+{
+    "__args__": [
+        "Travel",
+        [
+            {
+                "__args__": [],
+                "__kw__": {
+                    "date": {
+                        "__args__": [],
+                        "__kw__": {
+                            "year": 2013,
+                            "day": 1,
+                            "second": 0,
+                            "month": 1,
+                            "minute": 12,
+                            "hour": 11
+                        },
+                        "__class__": "datetime.datetime"
+                    },
+                    "tags": [
+                        "#RedRanger",
+                        "#Whitby42",
+                        "#ICW"
+                    ],
+                    "title": "Hard Aground",
+                    "rst_text": "Some embarraseing revelation.Includeing ? and ?"
+                },
+                "__class__": "Post"
+            },
+            {
+                "__args__": [],
+                "__kw__": {
+                    "date": {
+                        "__args__": [],
+                        "__kw__": {
+                            "year": 2013,
+                            "day": 2,
+                            "second": 0,
+                            "month": 2,
+                            "minute": 22,
+                            "hour": 22
+                        },
+                        "__class__": "datetime.datetime"
+                    },
+                    "tags": [
+                        "#RedRanger",
+                        "#Whitby42",
+                        "#Mistakes"
+                    ],
+                    "title": "Anchor Follies",
+                    "rst_text": "Some witty epigram.Includeing ? and ?"
+                },
+                "__class__": "Post"
+            }
+        ]
+    ],
+    "__kw__": {},
+    "__class__": "Blog"
+}

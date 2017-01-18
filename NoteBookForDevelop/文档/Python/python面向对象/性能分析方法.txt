@@ -3,10 +3,10 @@
 * 装饰器
 ```
 import time
-from functools import wraps
+import functools
 
 def fn_timer(function):
-    @wraps(function)
+    @functools.wraps(function)
     def function_timer(*args, **kwargs):
         t0 = time.time()
         result = function(*args, **kwargs)

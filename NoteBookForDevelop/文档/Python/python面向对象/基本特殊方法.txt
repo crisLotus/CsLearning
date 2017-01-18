@@ -1,4 +1,4 @@
-# [python特殊方法](http://www.ttlsa.com/docs/dive-into-python3/special-method-names.html)
+# [python标准库文档-特殊方法](https://docs.python.org/3.3/reference/datamodel.html) [python特殊方法](http://www.ttlsa.com/docs/dive-into-python3/special-method-names.html)
 * __new__()
 * __init__()
 * __repr__(), __str__(), __format__() == repr(), str(), format()
@@ -16,7 +16,10 @@
 * __len__ 序列的长度   len(seq)    seq.__len__()
 * __enter__ 在进入 with 语块时进行一些特别操作    with x: x.__enter__()
 * __exit__ 在退出 with 语块时进行一些特别操作    with x: x.__exit__()
+* __iter__ 生成iter对象
+* __next__ 
 * __slots__ 限制属性的数量
+
 # __new__()
 ```
 1. 创建内置不可变子类
