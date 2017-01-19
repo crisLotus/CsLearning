@@ -66,7 +66,9 @@ class B(A):
         pass
 ```
 # decorate 装饰器
+
 ## 有用的方法方法
+
 @functools.wraps(func)  方便debug
 ## 演示
 ```python
@@ -115,6 +117,7 @@ class Mixin:
 class De(Mixin):
     pass
 ```
+
 # [PEP8 Python 编码规范整理](https://www.douban.com/note/134971609/)
     [编码结构](http://python.jobbole.com/84618/)
 

@@ -11,12 +11,12 @@ python -m pdb myscript.py
 3. 比较常用的，就是在程序中间插入一段程序，相对于在一般IDE里面打上断点然后启动debug，不过这种方式是hardcode的
 
 if __name__ == "__main__":
-a = 1
-import pdb
-pdb.set_trace()
-b = 2
-c = a + b
-print (c)
+	a = 1
+	import pdb
+	pdb.set_trace()
+	b = 2
+	c = a + b
+	print (c)
 然后正常运行脚本，到了pdb.set_trace()那就会定下来，就可以看到调试的提示符(Pdb)了
 ```
 # help:

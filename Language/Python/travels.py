@@ -1,9 +1,10 @@
-# [json对象持久化](http://www.jsonrpc.org/specification)
-* [json介绍](http://www.json.org/json-zh.html)
-```python
+#! -*- coding:utf-8 -*-
+import tools
 import json
 import datetime
 import collections
+import yaml
+import pickle
 
 
 class Post:
@@ -110,12 +111,32 @@ def test_blog_main():
             tags=('#RedRanger', '#Whitby42', '#Mistakes'),
         )
     )
-    text = json.dumps(travel, indent=4, default=Blog.blog_encode)
-    blog_obj = json.loads(text, object_hook=Blog.blog_decode)
-    with open('tmp.json', 'w', encoding='utf-8') as target:
-        json.dump(travel,target, indent=4, default=Blog.blog_encode)
-    with open('tmp.json','r', encoding='utf-8') as t:
-        obj = json.load(t, object_hook=Blog.blog_decode)
-        print(obj.title)
+    # json
+    # text = json.dumps(travel, indent=4, default=Blog.blog_encode)
+    # blog_obj = json.loads(text, object_hook=Blog.blog_decode)
+    # with open('tmp.json', 'w', encoding='utf-8') as target:
+    #     json.dump(travel, target, separators=(',', ':'),
+    #               default=Blog.blog_encode)
+    # with open('tmp.json', 'r', encoding='utf-8') as t:
+    #     obj = json.load(t, object_hook=Blog.blog_decode)
+    #     print(obj.title)
 
-```
+    # yaml
+    # text2 = yaml.dump(travel)
+    # print(text2)
+    # print(yaml.load(text2).title)
+
+    # pickle
+    # with open('travel.p', 'wb') as t:
+    #     pickle.dump(travel, t)
+    # with open('travel.p', 'rb') as t:
+    #     obj = pickle.load(t)
+    #     print(obj.title)
+
+
+def main():
+    test_blog_main()
+
+
+if __name__ == '__main__':
+    main()
