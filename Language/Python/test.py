@@ -1,42 +1,11 @@
 #! -*- coding:utf-8 -*-
-import shelve
+import sys
+import argparse
 
-
-class Blog:
-    """
-
-    Usage:
-
-        >>> b1 = Blog('Travel Blog')
-        >>> shelf = shelve.open('data/blog', 'n')
-        >>> b1._id = 'Blog:1'
-        >>> b1._id
-        'Blog:1'
-        >>> shelf[b1._id] = b1
-        >>> shelf.close()
-        >>> shelf = shelve.open('data/blog', 'w')
-        >>> shelf['Blog:1']._id
-        'Blog:1'
-
-    """
-
-    def __init__(self, title, *posts):
-        self.title = title
-
-    def as_dict(self):
-        return dict(
-            title=self.title,
-            underline='='*len(self.title),
-        )
-
-
-def main():
-    if True:
-        t = 'aaaa'
-    print('test.asdf'.split())
-
-
-if __name__ == '__main__':
-    import doctest
-    doctest.testmod()
-    main()
+if __name__ == "__main__":
+    print(sys.argv[1], len(sys.argv))
+    for i in range(len(sys.argv)):
+        pass
+        # print(sys.argv.pop(0), end=' ')
+    parser = argparse.ArgumentParser(description='SimulateParser')
+    config = parser.add_argument('-v', '-verbose', action='store_true', default=False)

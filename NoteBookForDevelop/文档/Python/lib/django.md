@@ -1,0 +1,568 @@
+# Django 1.8.2 文档
+# http://python.usyiyi.cn/django_182/index.html
+
+# -------------------------------------------------------------------------------------
+# 一、安装
+'''
+1. python2.7 （Linux自带2.6的操作）
+  下载 https://www.python.org/downloads/source/
+  ./configure --prefix=/usr/local/python2.7
+  make && make install
+  
+  查找python命令目录
+  whereis python
+  mv /usr/bin/python /usr/bin/python2.6_bak
+  
+  mv //usr/local/python2.7/bin/python2.7 /usr/bin/python
+
+
+2. setuptools 安装
+  python setup.py install
+  
+3. pip 安装
+  python setup.py install
+
+4. Django安装
+  pip install django
+  
+5. 验证 or 查看版本
+  >>> import django
+  >>> print(django.get_version())
+  1.8
+  
+'''
+
+# -----------------------------------------------------------------------------------------------
+# 入门 - 第1部分 - 模型
+'''
+目标：基本的投票应用。
+    它包含两部分：
+    一个对外的网站，可以让人们查看投票的结果并让他们进行投票。
+    一个管理网站，可让你添加、修改和删除选票。
+
+
+
+1. 创建一个项目
+    cd /data/django
+    django-admin.py startproject mysite
+    这将会在你的当前目录下生成一个 mysite目录
+  
+2. 数据库的建立 (mysql)
+    默认情况下，该配置使用SQLite，但本次学习中，lxf改用mysql；
+  
+  1) mysql操作
+     mysql安装
+     mysql帐号
+     创建库：create database django_test;
+     
+     Python MySQLdb安装:pip install MySQL-python
+  
+  2） vim settings.py 设置 sql 配置
+      cd /data/django/mysite
+      vim settings.pyc
+        DATABASES = DATABASES = {
+          'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME' : 'django_test',  #mysql数据库名
+            'USER' : 'root',         #mysql用户名
+            'PASSWORD':'mysql密码',
+            'HOST':'127.0.0.1',
+            'PORT':'3306',
+           }
+        }
+      
+  3) django创建数据库
+     python manage.py migrate
+     
+3. 运行 runserver
+    cd /data/django/mysite
+    python manage.py runserver 0.0.0.0:8888
+     
+    此时IE访问http://192.168.97.39:8000/， 显示It Works。
+
+
+4. 创建模型
+    在的manage.py文件同级目录创建我们的投票应用，以便可以将它作为顶层模块导入，而不是mysite的子模块。
+    
+    1） 创建应用polls（投票系统）
+        cd /data/django/mysite
+        python manage.py startapp polls
+    
+       此时生成文件夹 polls
+       
+    2)  编辑 models.py
+        cd /data/django/mysite/polls
+        
+        vim models.py
+            from django.db import models
+            class Question(models.Model):
+                question_text = models.CharField(max_length=200)      # question_test字段名，CharField类型
+                pub_date = models.DateTimeField('date published')     # pub_date字段名， DateTimeField类型
+            class Choice(models.Model):
+                question = models.ForeignKey(Question)
+                choice_text = models.CharField(max_length=200)
+                votes = models.IntegerField(default=0)
+
+5.  激活模型
+    1） vim mysite/settings.py 修改INSTALLED_APPS设置以包含字符串'polls'
+        cd /data/django/mysite/mysite
+        vim settings.py
+          INSTALLED_APPS = (
+              'django.contrib.admin',
+              'django.contrib.auth',
+              'django.contrib.contenttypes',
+              'django.contrib.sessions',
+              'django.contrib.messages',
+              'django.contrib.staticfiles',
+              'polls',  ######增加polls应用#####
+          )
+          
+    2） 让 django知道要现在要包含polls应用
+        cd /data/django/mysite/
+        python manage.py makemigrations polls
+        
+        sqlmigrate命令接收迁移文件的名字并返回它们的SQL语句
+        python manage.py sqlmigrate polls 0001
+        
+    3） 再次运行migrate以在你的数据库中创建模型所对应的表
+        python manage.py migrate
+
+
+6. 玩转API
+    1) 交互的 shell
+        python manage.py shell
+          >>> from polls.models import Question, Choice   # Import the model classes we just wrote.
+          
+          >>> Question.objects.all()
+          []
+          
+          >>> from django.utils import timezone
+          >>> q = Question(question_text="What's new?", pub_date=timezone.now())
+          >>> q.save()
+          
+          >>> q.id
+          1
+          >>> q.question_text
+          "What's new?"
+          >>> q.pub_date
+          datetime.datetime(2012, 2, 26, 13, 0, 0, 775217, tzinfo=<UTC>)
+          
+          >>> q.question_text = "What's up?"
+          >>> q.save()
+          >>> Question.objects.all()
+          [<Question: Question object>]
+
+    2) 修复  [<Question: Question object>] 这个问题
+        vim polls/models.py
+            from django.db import models
+            
+            class Question(models.Model):
+                # ....  原内容保留，增加下面def函数
+                def __str__(self):              # __unicode__ on Python 2
+                    return self.question_text
+            
+            class Choice(models.Model):
+                # .... 原内容保留，增加下面def函数
+                def __str__(self):              # __unicode__ on Python 2
+                    return self.choice_text
+    
+    3） 添加一个自定义的方法
+        vim polls/models.py        
+          import datetime
+          
+          from django.db import models
+          from django.utils import timezone
+          
+          class Question(models.Model):
+              # ... 原内容保留，增加下面def函数
+              def was_published_recently(self):
+                  return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+    
+    4) 此时可以再次交互
+       python manage.py shell
+        from polls.models import Question, Choice
+        
+        >>> Question.objects.all()
+        >>> Question.objects.filter(id=1)
+        >>> Question.objects.filter(question_text__startswith='What')
+        
+        >>> from django.utils import timezone
+        >>> current_year = timezone.now().year
+        >>> Question.objects.get(pub_date__year=current_year)
+        
+        >>> Question.objects.get(pk=1)
+        
+        >>> q = Question.objects.get(pk=1)
+        >>> q.was_published_recently()
+        
+        >>> q = Question.objects.get(pk=1)
+        >>> q.choice_set.all()
+        
+        >>> q.choice_set.create(choice_text='Not much', votes=0)
+        >>> q.choice_set.create(choice_text='The sky', votes=0)
+        >>> c = q.choice_set.create(choice_text='Just hacking again', votes=0)
+        
+        >>> c.question
+        >>> q.choice_set.all()
+        >>> q.choice_set.count()
+        
+        >>> Choice.objects.filter(question__pub_date__year=current_year)
+        >>> c = q.choice_set.filter(choice_text__startswith='Just hacking')
+        >>> c.delete()
+        
+    5） mysql结果
+    
+        mysql> select * from polls_choice;
+        +----+-------------+-------+-------------+
+        | id | choice_text | votes | question_id |
+        +----+-------------+-------+-------------+
+        |  1 | Not much    |     0 |           1 |
+        |  2 | The sky     |     0 |           1 |
+        +----+-------------+-------+-------------+
+        2 rows in set (0.00 sec)
+        
+        mysql> select * from polls_question;
+        +----+---------------+---------------------+
+        | id | question_text | pub_date            |
+        +----+---------------+---------------------+
+        |  1 | What's up?    | 2016-03-31 06:23:45 |
+        +----+---------------+---------------------+
+        1 row in set (0.00 sec)
+    
+'''
+
+# -----------------------------------------------------------------------------------------------
+# 入门 - 第2部分 - 管理站点
+
+'''
+1.  创建一个管理员用户(能够登录管理站点的用户)
+    1）创建
+        python manage.py createsuperuser
+        Username: admin
+        Email address: admin@example.com
+        Password: lixuefei
+    2） 运行 runserver
+        python manage.py runserver
+    
+    
+2.  管理站点(不可管理 polls)
+        此时ie访问 http://127.0.0.1:8000/admin/ ，需要输入 admin lixuefei 登录。
+        你将看到几类可编辑的内容：groups和users。 它们是由django.contrib.auth提供的，这个认证框架集成在Django中。
+
+3.  让 poll 应用，在管理站点中可编辑
+    cd /data/django/mysite/polls
+    vim polls/admin.py
+        from django.contrib import admin
+        from .models import Question
+        admin.site.register(Question)
+        
+4. 管理站点(可管理 polls)
+    ie访问 http://127.0.0.1:8000/admin/ ，需要输入 admin lixuefei 登录。
+    此时可以管理 polls应用 ， Question
+
+5. 管理表单（自定义）
+    cd /data/django/mysite/polls
+    vim polls/admin.py 
+      ..... 原内容保留
+      class QuestionAdmin(admin.ModelAdmin):
+        fields = ['pub_date', 'question_text']
+        
+    以及还可以 fieldsets中每个元组的第一个元素是字段集的标题。以下是我们的对象表单现在的样子：
+               任意地为每个字段集指定HTML样式类。
+               
+               
+6.  添加关联对象 （ 字段 ）
+    1） Choice管理（同question那样做）
+        vim polls/admin.py
+          from .models import Choice, Question
+          .... 原内容保留
+          admin.site.register(Choice)
+          
+    2） 让 Choice变得完善 ( 仅提供3个选项空间 )
+        在创建Question对象的同时可以直接添加一组Choice将会更好。让我们实现这个功能。
+        移除对Choice模型的register()调用。然后将Question的注册代码编辑为：
+        vim polls/admin.py
+            from django.contrib import admin
+            from .models import Choice, Question
+            
+            class ChoiceInline(admin.StackedInline):
+                model = Choice
+                extra = 3
+            
+            class QuestionAdmin(admin.ModelAdmin):
+                fieldsets = [
+                    (None,               {'fields': ['question_text']}),
+                    ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
+                ]
+                inlines = [ChoiceInline]
+            
+            admin.site.register(Question, QuestionAdmin)
+            
+    3） ChoiceInline 的声明 （ 解决 Choice 对象的字段占用大量的屏幕空间 ）
+        使用 TabularInline（不是StackedInline），这些相关联的对象显示成紧凑的、基于表格的形式
+        
+        vim polls/admin.py
+            class ChoiceInline(admin.TabularInline):
+              .... 原内容不变
+        
+ 7.  自定义管理界面中的变更列表
+     “变更列表”界面 —— 该界面显示系统中所有的Question。
+     需求 ： 能显示每个字段
+     
+     1） 实现 ： 用list_display 选项来实现这个功能，它是一个要显示的字段名称的元组，在对象的变更列表页面上作为列显示：
+         vim polls/admin.py
+            # ... 原内容保持不变
+            list_display = ('question_text', 'pub_date')
+     2） was_published_recently 添加进来
+         vim polls/admin.py         
+            class QuestionAdmin(admin.ModelAdmin):
+                # ... 原内容不变
+                list_display = ('question_text', 'pub_date')
+ 
+ 8. 自定义项目的模板
+    1） 创建一个 tmplates目录
+        cd /data/django/mysite
+        mkdir templates
+        
+    2)  mysite/settings.py 在TEMPLATES 设置中添加一个DIRS 选项 : 'DIRS': [os.path.join(BASE_DIR,'templates')],
+        cd /data/django/mysite/mysite
+        vim mysite/settings.py
+          TEMPLATES = [
+              {
+                  'BACKEND': 'django.template.backends.django.DjangoTemplates',
+                  'DIRS': [os.path.join(BASE_DIR, 'templates')],    ##### 这1行是修改的内容 #####
+                  'APP_DIRS': True,
+                  'OPTIONS': {
+                      'context_processors': [
+                          'django.template.context_processors.debug',
+                          'django.template.context_processors.request',
+                          'django.contrib.auth.context_processors.auth',
+                          'django.contrib.messages.context_processors.messages',
+                      ],
+                  },
+              },
+          ]
+ 
+    3） 创建 tmplates/admin 目录
+        cd /data/django/mysite/templates
+        mkdir admin
+        
+        然后从Django源码中管理站点的模板目录（django/contrib/admin/templates）将admin/base_site.html拷贝到这个目录中
+        cd /data/Django/django/contrib/admin/templates/admin
+        cp base_site.html /data/django/mysite/templates/
+        
+'''
+
+# -----------------------------------------------------------------------------------------------
+# 入门 - 第3部分：视图和模板
+
+'''
+1.  理念
+    如何创建一个对外的界面
+    例如博客：
+      博客首页 —— 显示最新发表的博客。
+      博客“详细”页面 —— 单篇博客的固定链接页面。
+      基于年份的归档页面 —— 显示某给定年份里所有月份发表过的博客。
+      基于月份的归档页面 —— 显示在给定月份中发表过博客的所有日期。
+      基于日期的归档页面 —— 显示在给定日期中发表过的所有博客名称。
+      评论功能 —— 为一篇给定博客发表评论。
+
+
+2.  第1个视图 （视图中的 Hello World）
+    cd /data/django/mysite/polls/
+    
+    1)  vim views.py
+          from django.http import HttpResponse
+    
+          def index(request):
+              return HttpResponse("Hello, world. You're at the polls index.")
+    2)  vim polls/urls.py
+          from django.conf.urls import url
+          from . import views
+          
+          urlpatterns = [
+              url(r'^$', views.index, name='index'),
+          ]
+    
+    3)  让主URLconf可以链接到polls.urls模块。在mysite/urls.py中插入一个include()：
+        cd /data/django/mysite/mysite
+        vim mysite/urls.py
+          from django.conf.urls import include, url     ### 加了一个 include
+          from django.contrib import admin
+          
+          urlpatterns = [
+              url(r'^polls/', include('polls.urls')),
+              url(r'^admin/', include(admin.site.urls)),    ### 加
+          ]
+          
+    4) 在你的浏览器中浏览 http://localhost:8000/polls/ , 你会看到 “Hello, world. You’re at the polls index.”
+  
+  
+  
+3.  编写更多的试图
+  1) polls/views.py
+      cd /data/django/mysite/polls
+      
+      vi polls/views.py [追加以下内容]
+        def detail(request, question_id):
+            return HttpResponse("You're looking at question %s." % question_id)
+        
+        def results(request, question_id):
+            response = "You're looking at the results of question %s."
+            return HttpResponse(response % question_id)
+        
+        def vote(request, question_id):
+            return HttpResponse("You're voting on question %s." % question_id)
+      
+      
+      vi polls/urls.py
+        from django.conf.urls import url
+        from . import views
+        
+        urlpatterns = [
+            # ex: /polls/
+            url(r'^$', views.index, name='index'),    【r'^$' == 开头既是结尾】
+            # ex: /polls/5/
+            url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
+            # ex: /polls/5/results/
+            url(r'^(?P<question_id>[0-9]+)/results/$', views.results, name='results'),
+            # ex: /polls/5/vote/
+            url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
+        ]
+      
+  2) 效果
+    访问 http://192.168.97.39:8000/polls
+    返回“Hello, world. You're at the polls index. 11111”
+    
+    访问 http://192.168.97.39:8000/polls/8916/
+    返回 You're looking at question 8916.
+    
+    http://192.168.97.39:8000/polls/8916/results/
+    返回  You're looking at the results of question 8916.
+    
+    http://192.168.97.39:8000/polls/8916/vote/
+    返回  You're voting on question 8916.
+    
+    
+    
+4.  实际功能的视图
+  1) index()视图 - 它显示系统中最新发布的5条questions记录，并用逗号分割；
+      vim polls/views.py
+        from django.http import HttpResponse
+        from .models import Question
+
+        def index(request):
+            latest_question_list = Question.objects.order_by('-pub_date')[:5]
+            output = ', '.join([p.question_text for p in latest_question_list])
+            return HttpResponse(output)
+        【其他不变】
+  
+  2) templates目录 （自定义模板，将页面的设计从Python中分离出来）
+      1.  在你的polls目录下创建一个叫做 templates的目录。Django将在这里查找模板。
+      2.  polls/templates/polls/index.html
+          vim polls/templates/polls/index.html
+            {% if latest_question_list %}
+                <ul>
+                {% for question in latest_question_list %}
+                    <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p>No polls are available.</p>
+            {% endif %}
+      3.  更新polls/views.py中的index视图来使用模板：
+          vim polls/views.py
+            from django.http import HttpResponse
+            from django.template import RequestContext, loader
+            from .models import Question
+            
+            def index(request):
+                latest_question_list = Question.objects.order_by('-pub_date')[:5]
+                template = loader.get_template('polls/index.html')
+                context = RequestContext(request, {
+                    'latest_question_list': latest_question_list,
+                })
+                return HttpResponse(template.render(context))
+            [以上的代码载入polls/index.html模板，并传给它一个context。Context是一个字典，将模板变量的名字映射到Python 对象。]
+  
+  
+5.  快捷方式：render()
+  1) index()视图 - 
+    vim polls/views.py
+      from django.shortcuts import render
+      from .models import Question
+      
+      def index(request):
+          latest_question_list = Question.objects.order_by('-pub_date')[:5]
+          context = {'latest_question_list': latest_question_list}
+          return render(request, 'polls/index.html', context)
+
+6.  引发一个404错误 - 处理Question 详细页面的视图 —— 显示Question内容的页面：
+    目的：如果没有找到所请求ID的Question，这个视图引发一个Http404异常。
+    1） vim polls/views.py
+          from django.http import Http404
+          from django.shortcuts import render
+          
+          from .models import Question
+          # ...
+          def detail(request, question_id):
+              try:
+                  question = Question.objects.get(pk=question_id)
+              except Question.DoesNotExist:
+                  raise Http404("Question does not exist")
+              return render(request, 'polls/detail.html', {'question': question})
+
+    2） vim polls/templates/polls/detail.html
+          {{ question }}
+
+7.  快捷方式：get_object_or_404
+    一种习惯方式：使用get（），并且在对象不存在时引发Http404.Django为此提供一个快捷方式
+    下面是重写后的detail()
+    vim polls/views.py
+      from django.shortcuts import get_object_or_404, render
+      
+      from .models import Question
+      # ...其他内容一致；
+      def detail(request, question_id):
+          question = get_object_or_404(Question, pk=question_id)
+          return render(request, 'polls/detail.html', {'question': question})
+
+8.  使用模板
+    投票应用的detail()视图。 根据context 变量question，下面是polls/detail.html模板可能的样子：
+    vi polls/templates/polls/detail.html
+        <h1>{{ question.question_text }}</h1>
+        <ul>
+        {% for choice in question.choice_set.all %}
+            <li>{{ choice.choice_text }}</li>
+        {% endfor %}
+        </ul>
+    
+9.  移除模板中硬编码的URLs
+10. 带命名空间的URL名字
+      在真实的Django项目中，可能会有五个、十个、二十个或者更多的应用。 Django如何区分它们URL的名字呢？
+
+---
+'''
+# -----------------------------------------------------------------------------------------------
+# 入门 - 第4部分：表单和通用试图
+
+1. 编写一个简单的表单
+  让它包含一个HTML<form> 元素：
+  vim polls/templates/polls/detail.html
+    <h1>{{ question.question_text }}</h1>
+    
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+    
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+    {% csrf_token %}
+    {% for choice in question.choice_set.all %}
+        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+    {% endfor %}
+    <input type="submit" value="Vote" />
+    </form>
+
+
+
+
+

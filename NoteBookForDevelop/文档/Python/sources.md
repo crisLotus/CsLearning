@@ -1,3 +1,4 @@
+* [python官方文档翻译](http://python.usyiyi.cn/)
 * [awesome-python](https://github.com/vinta/awesome-python)
 * [python手册](http://docs.pythontab.com/python/python3.4/index.html)
 * [python特殊方法](http://www.ttlsa.com/docs/dive-into-python3/special-method-names.html)
@@ -5,7 +6,10 @@
 * [学习python 11个优秀资源](https://zhuanlan.zhihu.com/p/21464202)
 * [python 设计模式实现](https://github.com/gennad/Design-Patterns-in-Python)
 * [零基础学习python 资源](https://github.com/Yixiaohan/codeparkshare)
+
+* [Anaconda多环境多版本python配置指导](http://www.jianshu.com/p/d2e15200ee9b)
 * [win下多版本共存](https://segmentfault.com/a/1190000005068355)
+
 * [tools by Python](https://github.com/geekcomputers/Python)
 
 * [xxg1413/python笔记](https://github.com/xxg1413/python)
