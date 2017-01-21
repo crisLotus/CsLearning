@@ -1,4 +1,5 @@
 # [anconda](http://www.jianshu.com/p/d2e15200ee9b)
+
 ```
 conda update conda 	# 升级当前版本的conda
 conda create 		# conda create -n bunnies python=3 Astroid Babel

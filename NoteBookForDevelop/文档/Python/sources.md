@@ -1,4 +1,5 @@
 * [python官方文档翻译](http://python.usyiyi.cn/)
+* [python3.5翻译的文档](http://www.pythondoc.com/pythontutorial3/)
 * [awesome-python](https://github.com/vinta/awesome-python)
 * [python手册](http://docs.pythontab.com/python/python3.4/index.html)
 * [python特殊方法](http://www.ttlsa.com/docs/dive-into-python3/special-method-names.html)
