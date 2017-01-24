@@ -80,10 +80,13 @@ $RECYCLE.BIN/
 
 # Python
 .idea/
-venv/*
-__pycache__/*
+venv/
+__pycache__/
 
 
 # SAS
 *.sas7bdat
 *.doc
+
+# all
+tmp/*
