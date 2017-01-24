@@ -1,3 +1,7 @@
+# 2 to 3
+* [2 to 3对照](http://www.diveintopython3.net/porting-code-to-python-3-with-2to3.html)
+
+
 # import 
     包导入 当一个模块运行时，此模块自动加入sys.path
 # from . import *
@@ -127,8 +131,6 @@ class De(Mixin):
 ******** [Python快速教程](http://www.cnblogs.com/vamei/archive/2012/09/13/2682778.html)
 
 
-
-
 # *************************************************************************************
 
 # 内建函数
@@ -148,8 +150,25 @@ int float str
 eval 执行其中的数值表达式
 range()
 
-## list tuple dict
+## filter map reduce
 
+* filter 
+```
+def a(x):return x * x * x
+print(list(map(a, range(1, 11)))) # [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
+def b(x):return x + x
+print(list(map(b,"abcde"))) # ['aa', 'bb', 'cc', 'dd', 'ee']
+def f(x):return x % 2 != 0 and x % 3 != 0
+print(list(filter(f, range(2, 25)))) # [5, 7, 11, 13, 17, 19, 23]
+def f(x):return x != 'a'
+print(list(filter(f, "abcdef"))) # ['b', 'c', 'd', 'e', 'f']
+print(list(filter(b, 'abcdef'))) # ['a', 'b', 'c', 'd', 'e', 'f']
+def add(x, y):return x + y
+print(functools.reduce(add, range(1, 11))) # 55
+print(list(filter(lambda x:x, ['a', '', 'b', '', ' ']))) # ['a', 'b', ' ']
+```
+
+## list tuple dict
 
 # 好玩的库 
 turtle

@@ -57,8 +57,13 @@ def time_it(func):
     return function_timer
 
 
-# 带参数的任意次数装饰器
+
 def test_n_times_timer(times):
+    """
+    带参数的任意次数装饰器
+    :param times:
+    :return:
+    """
     def test_n_timer(func):
         @functools.wraps(func)
         def function_timer(*args, **kwargs):

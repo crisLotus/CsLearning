@@ -1,63 +1,25 @@
 #! -*- coding:utf-8 -*-
 import sys
 import argparse
+import tools
+import timeit
 
-def test():
-    """DocStrings
+@tools.test_n_times_timer(10000)
+def func_code():
+    a = 1 + 2
+    return a
 
-    测试文档字符串
-
-    Usage:
-        >>> test()
-
-    test() -> results
-
-    ...
-
-    :param:
-    :return:
-    """
-    pass
-
-
-def test2(a, b, c,):
-    """
-
-    :param a:
-    :param b:
-    :param c:
-    :return:
-    """
-    return None
-
-
-class Test:
-    """
-
-    """
-    def __init__(self, a, b, c):
-        """
-
-        :param a:
-        :param b:
-        :param c:
-        """
-        pass
-
-    def run(self, a, b, c):
-        """
-
-        :param a:
-        :param b:
-        :param c:
-        :return:
-        """
-        pass
 
 if __name__ == "__main__":
-    print(sys.argv[1], len(sys.argv))
+    # 测试命令行输入
+    #print(sys.argv[0], len(sys.argv))
     for i in range(len(sys.argv)):
         pass
         # print(sys.argv.pop(0), end=' ')
     parser = argparse.ArgumentParser(description='SimulateParser')
     config = parser.add_argument('-v', '-verbose', action='store_true', default=False)
+
+    fun = lambda a,b,c: 1 if a else 0
+    fun(5,1,1)
+
+    func_code()
