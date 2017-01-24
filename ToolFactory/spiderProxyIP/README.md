@@ -8,3 +8,5 @@
 	* requests.exceptions.ConnectTimeout:time out
 	* requests.exceptions.ProxyError:程主机强迫关闭了一个现有的连接
 	* requests.exceptions.ReadTimeout:Read time out
+## dependent
+BeautifulSoup requests yaml

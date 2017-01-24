@@ -3,9 +3,11 @@
 
 
 # import 
-    包导入 当一个模块运行时，此模块自动加入sys.path
-# from . import *
+* 包导入 当一个模块运行时，此模块自动加入sys.path
+* from . import *
     将. 中的库导入，不需要model.fun，直接fun即可调用
+* from ..p1 import model1,model2
+
 # 变量作用域
 ## global
 # 循环技巧
@@ -150,9 +152,8 @@ int float str
 eval 执行其中的数值表达式
 range()
 
-## filter map reduce
-
-* filter 
+## filter map reduce zip
+zip没有看
 ```
 def a(x):return x * x * x
 print(list(map(a, range(1, 11)))) # [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]

@@ -10,75 +10,63 @@ start:
 	mov ax,stacksg
 	mov ss,ax	;ss:stacksg
 	mov sp,0	;sp:0
-
 	;your code
-	mov bx,20
-	mov si,0
-	mov di,0
-	mov ax,[si]
-	mov saved_data,ax
-	mov dx,saved_data
-	mov al,dh
-	mov ah,dl
-	push ax
-	call _byte_bit_8b
+	mov bx,5;首行
+	mov si,0;字符指针
+	mov word ptr word_2,4
+	mov di,word_2;首列
+	call main_print_loop
 	
-	add si,1
+	mov word ptr word_2,21
+	mov di,word_2;首列
+	mov bx,5
+	call main_print_loop
 	
-	mov ax,[si]
-	mov saved_data,ax
-	mov dx,saved_data
-	mov al,dh
-	mov ah,dl
-	push ax
-	call _byte_bit_8b
-	
-	call _print_16b
-
 	mov ax,4c00h
 	int 21h
 
-_byte_bit_8b:
-	;data 4
+main_print_loop:
+
+	mov cx,16
+	main_loop_start:	
+		mov ax,[si]
+
+		mov saved_data,ax
+		mov dx,saved_data
+		mov al,dh
+		mov ah,dl
+		push ax
+		call _print_one_line
+	
+		add si,2
+		add bx,1;换行
+		mov di,word_2
+	loop main_loop_start
+	ret
+
+
+_print_one_line:
+	;data 16b	4
 	;init
 	;return None
 	push bp
 	mov bp,sp
-	push ss
-	push sp
+	push cx
 	
-	mov ax,stacksg2
-	mov ss,ax
-	mov sp,savasp
-	
-	mov cx,8
+	mov ax,ss:[bp+4]
+	mov cx,16
 	main_loop:
-		mov ax,ss:[bp+4]
 		mov dx,0
 		div t_2
 		push dx
 	loop main_loop
-	
-	mov savasp,sp
-	pop sp
-	pop ss
-	pop bp
-	ret 2
 
-_print_16b:
-	;bx保存行号，di保存列号
-	push ss
-	push sp
-	mov ax,stacksg2
-	mov ss,ax
-	mov sp,savasp
-	
 	mov dx,di;保存列号	
 	mov cx,16
 	_print_main_loop:
 		pop ax
 		cmp ax,1
-		jne _print_0_else
+		jne _print_0_end
 			mov ax,2;att
 			push ax
 			mov ax,3;char
@@ -87,17 +75,13 @@ _print_16b:
 			push ax
 			push bx;行号
 			call _print_c_
-			jmp endif__print_
-		_print_0_else:
-			pop ax
-		endif__print_:
+		_print_0_end:
 		add di,1
 	loop _print_main_loop
 	mov di,dx;回复列号
-	mov savasp,sp
-	pop sp
-	pop ss
-	ret
+	pop cx
+	pop bp
+	ret 2
 
 _print_c_:
 	;argc:
@@ -159,16 +143,12 @@ datasg segment
 	DB  11H,00H,01H,00H,0FFH,0FEH,01H,00H,01H,00H,01H,00H,01H,00H,01H,00H
 	
 	t_2 dw 2
-	savasp dw 0
+	word_2 dw 0;存第二个字的列数
 	saved_data dw 0
 datasg ends
 
 stacksg segment
 	db 0ffffh dup (0)
 stacksg ends
-
-stacksg2 segment
-	db 0ffffh dup (0)
-stacksg2 ends
 
 end start
