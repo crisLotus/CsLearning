@@ -40,7 +40,7 @@ loggers:
 
   spider:
     handlers: [console,simple]
-    level: DEBUG
+    level: INFO
 
 
 # http://python.usyiyi.cn/translate/python_352/library/logging.config.html
