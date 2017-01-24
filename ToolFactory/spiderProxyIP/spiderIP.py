@@ -24,7 +24,8 @@ class Spider:
         This spider is stupid!But enough to use.
         The result is save in the file not encoded in utf-8, be careful.
 
-        :param base_url: just like `http://www.kuaidaili.com/free/inha/`
+        :param base_url: just like `http://www.kuaidaili.com/free/inha/` or
+                                    `http://www.kuaidaili.com/proxylist/`
         :param start_page:
         :param end_page:
         :param filename:
@@ -139,7 +140,7 @@ class Spider:
 
 
 def main():
-    spider = Spider()
+    spider = Spider(end_page=100)
     spider.run()
 
 def test():
