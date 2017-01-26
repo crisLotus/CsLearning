@@ -1,0 +1,5 @@
+* [api设计]()
+* [理解RESTful架构](http://www.ruanyifeng.com/blog/2011/09/restful.html)
+* [RESTful API 设计指南](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
+* [RFC 6749 OAuth 2.0授权框架简体中文翻译](https://github.com/jeansfish/RFC6749.zh-cn)
+* [python oauth2 implement](https://pypi.python.org/pypi/python-oauth2)

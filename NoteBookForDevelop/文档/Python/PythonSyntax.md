@@ -50,6 +50,7 @@ repr() str()  生成解释器可读   生成人易读
 
 
 # 异常处理
+```
 try:
     result = x / y
 except ZeroDivisionError:
@@ -58,6 +59,8 @@ else:
     print("result is", result)
 finally:
     print("executing finally clause")
+```
+
 # class
 * 类变量 在类中定义                         -所有实例共享
 * 实例变量 在 __init__(self)中定义  -一个实例访问
@@ -76,6 +79,7 @@ class B(A):
 ## 有用的方法方法
 
 @functools.wraps(func)  方便debug
+
 ## 演示
 ```python
 @decorate
@@ -154,7 +158,8 @@ range()
 
 ## filter map reduce zip
 zip没有看
-```
+
+```python
 def a(x):return x * x * x
 print(list(map(a, range(1, 11)))) # [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
 def b(x):return x + x

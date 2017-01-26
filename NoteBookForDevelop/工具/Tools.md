@@ -4,6 +4,7 @@
 * [程序员高效率工作工具推荐（必备工具）](http://m.blog.csdn.net/article/details?id=41697895)
 * [Vagrant](https://www.vagrantup.com/) 虚拟机管理工具，用于搭建跨平台测试环境 配合virtualbox或vmare
 * VirtualBox
+* Genymotion android模拟器
 * **sublime text**
 * pycharm
 * eclipse
@@ -20,6 +21,8 @@
 * Wireshark 网络抓包工具（官方支持中文界面）
 * xampp+mysqlWorkbench
 * AxureRP
+* starUML
+* ida pro
 * Veracrypt 磁盘加密 虚拟磁盘加密工具
 * IrfanView 图片查看软件 中文
 * [LICEcap](http://www.cockos.com/licecap/):录屏gif图
