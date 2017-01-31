@@ -9,7 +9,7 @@ start:
 	mov ds,ax	;ds:datasg
 	mov ax,stacksg
 	mov ss,ax	;ss:stacksg
-	mov sp,0	;sp:
+	mov sp,100h	;sp:
 
 	;your code
 
@@ -22,7 +22,7 @@ datasg segment
 datasg ends
 
 stacksg segment
-	db 0ffffh dup (0)
+	db 0ffh dup (0)
 stacksg ends
 
 end start
