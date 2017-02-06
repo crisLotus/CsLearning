@@ -2,6 +2,7 @@
 * [python3.5翻译的文档](http://www.pythondoc.com/pythontutorial3/)
 * [awesome-python](https://github.com/vinta/awesome-python)
 * [Python最佳实践](http://www.dongwm.com/archives/Python%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/)
+* [python最佳实践](http://pythonguidecn.readthedocs.io/zh/latest/)
 * [python手册](http://docs.pythontab.com/python/python3.4/index.html)
 * [python推荐书](https://zhuanlan.zhihu.com/p/22198827?refer=python-cn)
 * [the-python-standard-library-by-example](https://xiuchundao.gitbooks.io/the-python-standard-library-by-example/content/)
