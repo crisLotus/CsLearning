@@ -1,0 +1,3 @@
+pyyaml
+sphinx
+ipython[notebook]

@@ -10,8 +10,6 @@ Welcome to Learn Python's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   implementation
-
 Indices and tables
 ==================
 
