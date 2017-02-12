@@ -54,7 +54,7 @@ repr() str()  生成解释器可读   生成人易读
 try:
     result = x / y
 except ZeroDivisionError:
-    print("division by zero!")
+    print("division by zero!",sys.exc_info())
 else:
     print("result is", result)
 finally:

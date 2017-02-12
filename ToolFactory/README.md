@@ -17,3 +17,6 @@ zhfenci.py
 
 ### spiderProxyIP 
 spide 代理服务器
+
+### panBaiduUrl.py
+用来提取视频真实地址，但是资源必须为公共分享

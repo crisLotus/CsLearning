@@ -5,6 +5,11 @@
 * python dict.py
 * python dict.py hello
 
+# 安装环境以来
+```
+pip install -r requirements.txt
+```
+
 # 设计
 输入单词后，会输出不同词性的意思，输出的漂亮一点
 同时最后一行输出链接地址，方便用户手动查看结果
@@ -22,10 +27,3 @@
 				*span 包含各种意思
 				*span 包含各种意思
 				...
-
-
-
-### 学习标准库爬虫 和 re
-### 完成爬虫
-
-# 进度
