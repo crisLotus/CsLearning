@@ -8,6 +8,7 @@
 * [the-python-standard-library-by-example](https://xiuchundao.gitbooks.io/the-python-standard-library-by-example/content/)
 * [python特殊方法](http://www.ttlsa.com/docs/dive-into-python3/special-method-names.html)
 * [Dive Into Python 3 英文书](http://www.diveintopython3.net/)
+* [深入 Python 3](http://www.ttlsa.com/docs/dive-into-python3/)
 * [Python Cookbook 3rd Edition Documentation](https://python3-cookbook.readthedocs.io/zh_CN/latest/)
 * [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
 * [学习python 11个优秀资源](https://zhuanlan.zhihu.com/p/21464202)

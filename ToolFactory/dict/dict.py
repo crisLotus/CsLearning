@@ -10,7 +10,6 @@ class Dict:
 
     def __init__(self, word):
         self.word = urllib.parse.quote(word)
-        print(self.word)
         self.result = None
         self.url = None
 
