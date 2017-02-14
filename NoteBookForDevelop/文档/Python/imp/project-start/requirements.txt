@@ -1,3 +1,9 @@
 pyyaml
 sphinx
-ipython[notebook]
+jupyter
+
+# for testing
+nose
+coverage
+# tox
+# testscenarios 场景测试
