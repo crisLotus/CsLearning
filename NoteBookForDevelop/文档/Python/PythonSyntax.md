@@ -156,7 +156,7 @@ int float str
 eval 执行其中的数值表达式
 range()
 
-## filter map reduce zip
+## filter map reduce zip filter
 zip没有看
 
 ```python

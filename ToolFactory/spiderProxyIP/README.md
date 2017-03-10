@@ -10,3 +10,6 @@
 	* requests.exceptions.ReadTimeout:Read time out
 ## dependent
 BeautifulSoup requests yaml
+
+## ERROR
+* 2017.03.03 貌似不能用了，问题未知，有时间修改一下

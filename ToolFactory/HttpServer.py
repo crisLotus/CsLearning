@@ -2,6 +2,7 @@
 from http.server import *
 import argparse
 
+
 def test(HandlerClass=BaseHTTPRequestHandler,
          ServerClass=HTTPServer, protocol="HTTP/1.0", port=8000, bind=""):
     """Test the HTTP request handler class.
@@ -22,6 +23,7 @@ def test(HandlerClass=BaseHTTPRequestHandler,
         print("\nKeyboard interrupt received, exiting.")
         httpd.server_close()
         sys.exit(0)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

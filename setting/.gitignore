@@ -93,6 +93,10 @@ MANIFEST
 *.sas7bdat
 *.doc
 
+# java
+/build/
+/log/
+
 # others
 tmp/
 log/
