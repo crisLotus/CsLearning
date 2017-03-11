@@ -37,3 +37,5 @@
 * [PEP 328 -- Imports: Multi-Line and Absolute/Relative](https://www.python.org/dev/peps/pep-0328/)
 
 [Python 魔术方法指南](http://pycoders-weekly-chinese.readthedocs.io/en/latest/issue6/a-guide-to-pythons-magic-methods.html#id18)
+
+http://wiki.jikexueyuan.com/project/explore-python/
