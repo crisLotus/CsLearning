@@ -19,7 +19,7 @@
 * Clover 让资源管理器像chrome一样分标签
 * Fidder http协议分析
 * Wireshark 网络抓包工具（官方支持中文界面）
-* xampp+mysqlWorkbench
+* xampp+mysqlWorkbench+navcat
 * AxureRP
 * starUML
 * ida pro

@@ -96,5 +96,5 @@ RequestDispatcher rd = application.getRequestDispatcher("/firstservletgetpara.js
 
 ## 同一会话保存的数据
 session.setAttribute() session.getAttribute()
-## 一次请求内存的数据
+## 一次请求内 存的数据
 request.setAttribute("name", s);  request.getAttribute("name")
