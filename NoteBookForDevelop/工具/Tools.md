@@ -16,6 +16,9 @@
 * Cmder win下cmd的替代品，分portable版(portable版内置git)和mini版
 * putty ssh远程登陆工具
 * shadowsocks
+* [xyplorer](https://www.xyplorer.com/) 文件管理，可以给文件加标签
+	* 激活信息1 www.dayanzai.me xy01-ST00-ffc0-b1f0-7036-0a72-sh11-0923
+	* 激活信息2 www.oyksoft.com xy01-1000-3f93-6f16-dc93-ee14-0cc4
 * Clover 让资源管理器像chrome一样分标签
 * Fidder http协议分析
 * Wireshark 网络抓包工具（官方支持中文界面）
@@ -41,6 +44,9 @@
 * 网易云音乐
 * 微信 你懂的
 * 静网大师 视频去广告
+* office 
+* [texlive](https://github.com/weijianwen/SJTUThesis/wiki/texlive-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
+
 
 # linux平台
 
