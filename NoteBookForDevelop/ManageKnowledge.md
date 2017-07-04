@@ -36,6 +36,7 @@
 			* 应用关系图
 			* 论文引用提醒
 			* 到处论文到endnote 标记结果列表
+			* 对领域的研究趋势有一定的统计
 		* 高级检索
 			* *(0-n) $(0-1) ?(1)
 	* [scopus](https://www.scopus.com/)
@@ -43,6 +44,7 @@
 * 中文文献数据库
 	* [知网](http://www.cnki.net/)
 		* 引用可视化
+		* [学术趋势](http://trend.cnki.net)
 	* [万方](http://www.wanfangdata.com.cn/)
 	* [维普](http://www.cqvip.com/)
 	* [超星](https://www.chaoxing.com/)

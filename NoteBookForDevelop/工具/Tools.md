@@ -44,9 +44,9 @@
 * 网易云音乐
 * 微信 你懂的
 * 静网大师 视频去广告
-* office 
+* office
 * [texlive](https://github.com/weijianwen/SJTUThesis/wiki/texlive-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
-
+* [ShareX](https://github.com/ShareX/ShareX/)
 
 # linux平台
 
