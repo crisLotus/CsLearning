@@ -13,7 +13,7 @@
 * meld : diff图形界面
 * git
 * SourceTree git的图形界面
-* Cmder win下cmd的替代品，分portable版(portable版内置git)和mini版
+* Cmder+gow win下cmd的替代品，分portable版(portable版内置git)和mini版
 * putty ssh远程登陆工具
 * shadowsocks
 * [xyplorer](https://www.xyplorer.com/) 文件管理，可以给文件加标签

@@ -1,0 +1,10 @@
+ddff
+不安全, 安全
+strcpy: strncpy 
+strcat: strncat
+sprintf|vsprintf: sprintf(usage, "USAGE: %*s\n", BUF_SIZE, argv[0]);
+scanf系列sscanf fscanf vfscanf vscanf vsscanf: 类似sprintf|vsprintf
+gets: fgets
+getchar fgetc getc read: 如果在循环中使用这些函数，确保检查缓冲区边界
+getenv: 系统调用 getenv() 的最大问题是您从来不能假定特殊环境变量是任何特定长度的
+http://wiki.jikexueyuan.com/project/c-advance/unsafelibfun.html,sss

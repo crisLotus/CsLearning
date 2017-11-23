@@ -1,12 +1,27 @@
 * 杂
+	* [readthedocs](https://readthedocs.org/)
+	* [www.cheat-sheets.org](http://www.cheat-sheets.org/)
     * [程序员小抄大全](http://coolshell.cn/articles/1566.html#more-1566)
     * [程序员/设计师能用上的 75 份速查表](http://www.oschina.net/news/50465/best-cheat-sheets-for-designers-and-programmers)
     * [awesome-cheatsheet](https://github.com/detailyang/awesome-cheatsheet)
+    * [awesome-cheatsheet](https://github.com/detailyang/awesome-cheatsheet)
+    * [awesome-cheatsheet](https://github.com/vaputa/awesome-cheatsheet)
     * [cheat-sheets](http://www.cheat-sheets.org/)
     * [bootstrap-cheatsheet](https://hackerthemes.com/bootstrap-cheatsheet/)
 * linux
+	* [linux常见命令的列表](http://www.pixelbeat.org/cmdline_zh_CN.html)
     * [linux命令](http://www.unixguide.net/linux/linuxshortcuts.shtml)
     * [linux命令](http://www.pixelbeat.org/cmdline_zh_CN.html)
 * python
+	* [一个ipythonnote](https://github.com/ShuaiW/ml-cheatsheet)
+	* [python-cheat-sheet](http://www.cheat-sheets.org/saved-copy/python-cheat-sheet-v1.pdf)
     * [ipynb-cheat-sheet](https://zenodo.org/record/44973/files/ipynb-cheat-sheet.pdf)
-    
+    * [python2.4](http://www.cheat-sheets.org/saved-copy/PQRC-2.4-A4-latest.pdf)
+    * [django-1.5](https://www.mercurytide.co.uk/media/resources/django-cheat-sheet.pdf)
+    * [django-reference](http://www.cheat-sheets.org/saved-copy/django_reference_sheet.pdf)
+    * [sqlalchemy](https://www.pythonsheets.com/notes/python-sqlalchemy.html)
+    * [Python for Data Science Cheat Sheets](https://ask.hellobi.com/blog/datasharing/6956)
+* AI
+	* [python-cheatsheets-ai](https://github.com/kailashahirwar/cheatsheets-ai)
+	* [data-science-cheatsheets](https://www.datacamp.com/community/data-science-cheatsheets)
+	* [supervised learning](https://github.com/rcompton/ml_cheat_sheet/blob/master/supervised_learning.ipynb)
