@@ -111,20 +111,20 @@ class Search:
             else:
                 print("None")
             input_string = input("输入检索词：")
-        
+
         with open("result/shun.txt", 'w', encoding="utf8") as file:
             file.write('顺拍档\n')
             file.write(str(self.shun))
         with open("result/dao.txt", 'w', encoding="utf8") as file:
             file.write('倒排档\n')
             file.write(str(self.dao))
-        json.dump(self.shun,open('result/shun.json', 'w', encoding='utf8'), indent=4)
-        json.dump(self.dao,open('result/dao.json', 'w', encoding='utf8'), indent=4)
+        json.dump(self.shun, open('result/shun.json', 'w', encoding='utf8'), indent=4)
+        json.dump(self.dao, open('result/dao.json', 'w', encoding='utf8'), indent=4)
         print('exit')
 
 
 def main():
-    # 读取文件，并整理到text中
+    """读取文件，并整理到text中"""
     text = list()
     for file in os.listdir(os.path.join(os.getcwd(), 'doc')):
         one_file_info = {'num': None, "string": None}
