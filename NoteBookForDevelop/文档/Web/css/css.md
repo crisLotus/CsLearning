@@ -1,3 +1,4 @@
+* [awesome-css](https://github.com/sotayamashita/awesome-css)
 * [前端资源整理](https://zhuanlan.zhihu.com/p/23344447)
 * [前端知识体系](http://my.oschina.net/hxwny/blog/499513)
 * [前端学习](https://github.com/qiu-deqing/FE-learning)
@@ -10,6 +11,7 @@
 * [**CSS 实例**](http://www.runoob.com/css/css-examples.html)
 * [html css 入门](http://edu.51cto.com/index.php?do=lession&id=55960)
 * [html5/css3响应式布局介绍及设计流程](http://www.51xuediannao.com/html+css/htmlcssjq/694.html)
+* [css参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS)
 
 # CSS文档结构
 * CSS文档结构
@@ -214,3 +216,18 @@ a:active {color:#0000FF;}
     wrap	当容器中的条目超出容器在主轴方向上的一行时，会把条目排列到下一行。下一行的位置与交叉轴的方向一致。
     wrap-reverse	与 wrap 的含义类似，不同的是下一行的位置与交叉轴的方向相反
 可以使用"flex-flow"属性把"flex-direction"和"flex-wrap"结合起来```flex-flow: row wrap;```
+
+# [css参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference)
+## 属性继承
+## [css层叠计算优先级]()
+### [css层叠](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Cascade)
+### [css特异性-优先级](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity)
+特异性增加：
+0. 类型选择器（type selectors）（例如, h1）和 伪元素（pseudo-elements）（例如, ::before）
+1. 类选择器（class selectors） (例如,.example)，属性选择器（attributes selectors）（例如, [type="radio"]），伪类（pseudo-classes）（例如, :hover）
+2. ID选择器（例如, #example）
+给元素添加的内联样式 (例如, style="font-weight:bold")总会覆盖外部样式表的任何样式 ，因此可看作是具有最高的优先级。
+
+# 响应式布局
+* [响应式设计](https://www.ibm.com/developerworks/cn/web/1506_zhangqun_responsiveweb/index.html)
+* [IBM bootstrap](https://www.ibm.com/developerworks/cn/web/1508_wangqf_bootstrap/index.html)
