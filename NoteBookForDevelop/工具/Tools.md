@@ -45,6 +45,11 @@
 * office
 * [texlive](https://github.com/weijianwen/SJTUThesis/wiki/texlive-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
 * [ShareX](https://github.com/ShareX/ShareX/)
+* understand 代码阅读利器
+* keepass+坚果云
+* zotero 文献管理
+* UltraISO 启动盘制作
+* VeraCrypt 加密盘
 
 # linux平台
 
