@@ -8,8 +8,7 @@
 * **sublime text**
 * pycharm
 * eclipse
-* koala
-* starUML
+* koala sass
 * meld : diff图形界面
 * git
 * SourceTree git的图形界面
@@ -19,13 +18,13 @@
 * [xyplorer](https://www.xyplorer.com/) 文件管理，可以给文件加标签
 	* 激活信息1 www.dayanzai.me xy01-ST00-ffc0-b1f0-7036-0a72-sh11-0923
 	* 激活信息2 www.oyksoft.com xy01-1000-3f93-6f16-dc93-ee14-0cc4
-* Clover 让资源管理器像chrome一样分标签
+* [Clover](http://cn.ejie.me/download) 让资源管理器像chrome一样分标签
 * Fidder http协议分析
 * Wireshark 网络抓包工具（官方支持中文界面）
-* xampp+mysqlWorkbench+navcat
+* [xampp](https://www.apachefriends.org/download.html)+mysqlWorkbench+navcat
 * AxureRP
-* starUML
-* ida pro
+* [starUML](http://staruml.io/download)
+* ida pro 逆向工程
 * Veracrypt 磁盘加密 虚拟磁盘加密工具
 * IrfanView 图片查看软件 中文
 * [LICEcap](http://www.cockos.com/licecap/):录屏gif图
@@ -39,11 +38,10 @@
 * [total uninstall](http://www.appcgn.com/total-uninstall-pro.html)
 * 完美解码
 * 百度云
-* sumetraPDF
+* [sumetraPDF](https://www.sumatrapdfreader.org/dl/SumatraPDF-3.1.2-64.zip)
 * adobe
-* 网易云音乐
-* 微信 你懂的
-* 静网大师 视频去广告
+* [网易云音乐](https://music.163.com/api/pc/download/latest)
+* [微信](http://dldir1.qq.com/weixin/Windows/WeChatSetup.exe) 你懂的
 * office
 * [texlive](https://github.com/weijianwen/SJTUThesis/wiki/texlive-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
 * [ShareX](https://github.com/ShareX/ShareX/)
