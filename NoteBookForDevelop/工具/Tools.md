@@ -12,7 +12,7 @@
 * meld : diff图形界面
 * git
 * SourceTree git的图形界面
-* Cmder+gow win下cmd的替代品，分portable版(portable版内置git)和mini版
+* Cmder+gow win下cmd的替代品，分portable版(portable版内置git)和mini版(如果安装了vagrant，可以直接使用vagrant里的mingw64，不用安装gow)
 * putty ssh远程登陆工具
 * shadowsocks
 * [xyplorer](https://www.xyplorer.com/) 文件管理，可以给文件加标签

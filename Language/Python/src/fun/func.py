@@ -8,3 +8,4 @@ if __name__ == '__main__':
     plus = lambda x, y: x + y
     print('reduce', functools.reduce(lambda x, y: x + y, [1,2,3,4,5]))
     print('reduce', functools.reduce(lambda x, y : x + y, [1,2,3,4,5,6,7,8]))
+    

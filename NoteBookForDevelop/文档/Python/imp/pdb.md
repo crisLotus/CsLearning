@@ -6,7 +6,7 @@ python -m pdb myscript.py
 2. 在Python交互环境中启用调试
 >>> import pdb
 >>> import mymodule
->>> pdb.run(‘mymodule.test()’)
+>>> pdb.run('mymodule.test()')
 
 3. 比较常用的，就是在程序中间插入一段程序，相对于在一般IDE里面打上断点然后启动debug，不过这种方式是hardcode的
 

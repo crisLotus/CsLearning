@@ -1,3 +1,11 @@
+* [Python面向对象编程指南 Steven F. Lott](http://www.jb51.net/books/511208.html)
+* [**beautiful_idiomatic_python**](https://github.com/JeffPaine/beautiful_idiomatic_python)
+* [怎么样才算是精通 Python？](https://www.zhihu.com/question/19794855)
+* [Python 有哪些优雅的代码实现让自己的代码更pythonic？](https://www.zhihu.com/question/37751951/answer/73425339)
+
+
+
+
 * [python官方文档翻译](http://python.usyiyi.cn/)
 * [python3.5翻译的文档](http://www.pythondoc.com/pythontutorial3/)
 * [awesome-python](https://github.com/vinta/awesome-python)

@@ -7,7 +7,6 @@
 [开始使用 Vagrant](https://imququ.com/post/vagrantup.html)
 [163软件源配置方法](http://wtt.tt/zai-ubuntu-16-04-shang-geng-huan-wei-wang-yi-jing-xiang-yuan/)
 [国内镜像源](https://segmentfault.com/a/1190000000375848)
-账号密码 vagrant vagrant
 
 ```
  $ vagrant box add {title} {url}
