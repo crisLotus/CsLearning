@@ -23,6 +23,7 @@ a = [1,2,3]
 b = list(a)
 c = a[:]
 ```
+
 # 函数参数
 ```
 def func(x, y, z=0, *args, **kwargs):
