@@ -27,6 +27,17 @@ conda install iopro
 conda install --channel https：//conda .anaconda.ort/pandas bottleneck
 ```
 
+# 包管理
+* [pipenv使用指南](https://pengshp.github.io/post/pipenv-guide/)
+* pip、easy_install和virtualenv，virtualenvwrapper、virtualenv-burrito和autoenv，pyvenv、venv（Python 3标准库）、pyenv
+* 强制更新pip python3 -m pip install --upgrade --force-reinstall pip
+* 安装 pip install pipenv
+* 创建虚拟环境 pipenv --three
+* 新建Python3 的虚拟环境 pipenv --three
+* 更换清华的pipy源 sed -i s/pypi.tuna.tsinghua.edu.cn/g Pipfile
+* pipenv install安装列表是通过读取pipfile, pipfile.lock文件实现的,如果没有这两个文件就根据requirements.txt生成pipfile和pipfile.lock并读取.
+* 想单独安装某个模块还可以指定模块名安装:pipenv install sanic
+
 # pylint
 * pip install pylint
 * [一个文档](https://www.ibm.com/developerworks/cn/linux/l-cn-pylint/index.html)
