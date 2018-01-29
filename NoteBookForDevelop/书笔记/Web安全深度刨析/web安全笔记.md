@@ -5,6 +5,13 @@
 		* 管理后台 intitle:管理登陆
 	- 指纹识别 系统 容器 应用
 	- 漏洞扫描 sqlinjection xss bufferoverflow 
+* 漏洞原理
+	* sql注入 sqlmap
+	* 上传漏洞
+	* xss xsser.me
+	* 命令执行漏洞
+	* 文件包含漏洞 url 包含日志 包含文件
+	* CSRF
 
 * 综合
 	* 暴力破解  Nmap medusa Hydra burpsuite X-scan CrackDB 

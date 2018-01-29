@@ -98,7 +98,7 @@ dig   查询DNS 域名服务器的工具
 
 管理
 kill          pkill
-service
+service	服务
 touch     change file timestamps
 chmod     change file mode bits改变权限
 chown     change file owner and group
