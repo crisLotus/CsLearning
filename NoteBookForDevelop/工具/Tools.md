@@ -9,11 +9,8 @@
 * pycharm
 * eclipse
 * koala sass
-* meld : diff图形界面
-* git
 * SourceTree git的图形界面
-* Cmder+gow win下cmd的替代品，分portable版(portable版内置git)和mini版(如果安装了vagrant，可以直接使用vagrant里的mingw64，不用安装gow)
-* putty ssh远程登陆工具
+* Cmder win下cmd的替代品，分portable版(portable版内置git)和mini版(如果安装了vagrant，可以直接使用vagrant里的mingw64，不用安装gow)
 * shadowsocks
 * [xyplorer](https://www.xyplorer.com/) 文件管理，可以给文件加标签
 	* 激活信息1 www.dayanzai.me xy01-ST00-ffc0-b1f0-7036-0a72-sh11-0923
@@ -36,7 +33,6 @@
 	* [postman](https://www.getpostman.com)
 * [VMware ThinApp 4.7.3绿色版 - 单文件软件、便携软件制作工具](http://www.portablesoft.org/vmware-thinapp/)
 * [total uninstall](http://www.appcgn.com/total-uninstall-pro.html)
-* 完美解码
 * 百度云
 * [sumetraPDF](https://www.sumatrapdfreader.org/dl/SumatraPDF-3.1.2-64.zip)
 * adobe
@@ -45,11 +41,19 @@
 * office
 * [texlive](https://github.com/weijianwen/SJTUThesis/wiki/texlive-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
 * [ShareX](https://github.com/ShareX/ShareX/)
-* understand 代码阅读利器
+* understand Sourcetrail 代码阅读利器
 * keepass+坚果云
 * zotero 文献管理
 * UltraISO 启动盘制作
 * VeraCrypt 加密盘
+
+* chrome 插件
+	* [SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega/releases)
+	* [Pocket]()
+	* [广告终结者]()
+	* [zotero]()
+	* [有道词典]()
+	* [滴答清单]()
 
 # linux平台
 
