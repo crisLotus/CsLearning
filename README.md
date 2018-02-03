@@ -1,9 +1,9 @@
 # 整理所学
 
 1. CSAPP		深入理解操作系统
-* Language	学习各种变成语言的代码
+* Language	学习各种语言语言的代码
 * NoteBookForDevelop 编程笔记相关 包括文档 工具汇总和各种博客地址
-* ToolFactory	整理的工具
+* ToolFactory	整理、自己写的工具
 
 # 资源
 * [计算机开放电子书汇总](https://raw.githubusercontent.com/it-ebooks/it-ebooks-archive/master/README.md)

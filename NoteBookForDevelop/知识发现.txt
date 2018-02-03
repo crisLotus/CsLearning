@@ -1,1 +1,1 @@
-本体 https://github.com/taurenshaman/semantic-web
+本体资源 https://github.com/taurenshaman/semantic-web

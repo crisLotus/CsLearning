@@ -88,15 +88,5 @@ cover/
 .coverage
 MANIFEST
 
-
-# SAS
-*.sas7bdat
-*.doc
-
 # java
 /build/
-/log/
-
-# others
-tmp/
-log/

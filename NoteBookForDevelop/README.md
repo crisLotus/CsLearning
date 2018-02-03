@@ -10,6 +10,9 @@
 
 ## 文档中重要的部分就是cheat sheet
 
+## 书笔记
+平时读书笔记（部分包含代码）
+
 # 其他人笔记
 
 * [lijin-notes](https://github.com/lijin-THU/notes-python)
