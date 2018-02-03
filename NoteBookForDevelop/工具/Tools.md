@@ -54,6 +54,9 @@
 	* [zotero]()
 	* [有道词典]()
 	* [滴答清单]()
+* tex
+	* [ctex](http://www.ctex.org/)
+	* [在线latex](https://cn.sharelatex.com/)
 
 # linux平台
 
