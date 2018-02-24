@@ -2,6 +2,9 @@
 
 * [2014年Windows平台软件推荐：神器小工具（骨灰级）](http://www.tuicool.com/articles/fy2EnqJ)
 * [程序员高效率工作工具推荐（必备工具）](http://m.blog.csdn.net/article/details?id=41697895)
+* 平时工作流程（个人习惯不开机重启）
+	* [wox](https://github.com/Wox-launcher/Wox)可以通过热键打开链接 程序 文件等任何东西，电脑里有了他都可以打开
+	* everything 文件检索
 * [Vagrant](https://www.vagrantup.com/)+[vagrantmanager](https://github.com/lanayotech/vagrant-manager-windows/releases)虚拟机管理工具，用于搭建跨平台测试环境 配合virtualbox或vmare
 * VirtualBox
 * Genymotion android模拟器
@@ -20,7 +23,6 @@
 * Wireshark 网络抓包工具（官方支持中文界面）
 * [xampp](https://www.apachefriends.org/download.html)+mysqlWorkbench+navcat
 * AxureRP
-* [starUML](http://staruml.io/download)
 * ida pro 逆向工程
 * Veracrypt 磁盘加密 虚拟磁盘加密工具
 * IrfanView 图片查看软件 中文
@@ -39,13 +41,13 @@
 * [网易云音乐](https://music.163.com/api/pc/download/latest)
 * [微信](http://dldir1.qq.com/weixin/Windows/WeChatSetup.exe) 你懂的
 * office
-* [texlive](https://github.com/weijianwen/SJTUThesis/wiki/texlive-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
 * [ShareX](https://github.com/ShareX/ShareX/)
 * understand Sourcetrail 代码阅读利器
 * keepass+坚果云
 * zotero 文献管理
 * UltraISO 启动盘制作
 * VeraCrypt 加密盘
+* [power bi](https://powerbi.microsoft.com/en-us/downloads/)商业智能，excel格式文件生成图表
 
 * chrome 插件
 	* [SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega/releases)
@@ -55,10 +57,11 @@
 	* [有道词典]()
 	* [滴答清单]()
 * tex
-	* [ctex](http://www.ctex.org/)
+	* [MiKTeX](https://miktex.org/portable) tex编译器
 	* [在线latex](https://cn.sharelatex.com/)
 * uml
 	* [文本形式化uml](http://www.ffnn.nl/pages/articles/media/uml-diagrams-using-graphviz-dot.php)
+	* [starUML](http://staruml.io/download)
 
 # linux平台
 
