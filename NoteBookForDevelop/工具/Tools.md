@@ -57,6 +57,8 @@
 * tex
 	* [ctex](http://www.ctex.org/)
 	* [在线latex](https://cn.sharelatex.com/)
+* uml
+	* [文本形式化uml](http://www.ffnn.nl/pages/articles/media/uml-diagrams-using-graphviz-dot.php)
 
 # linux平台
 

@@ -1,0 +1,75 @@
+# depslib dependency file v1.0
+1519436930 source:d:\project\code_interviews\main.c
+	<stdio.h>
+	<stdlib.h>
+	"minctest.h"
+	"list.h"
+	"stack.h"
+
+1519367476 d:\project\code_interviews\minctest.h
+	<stdio.h>
+	<math.h>
+	<time.h>
+	<string.h>
+
+1519373066 d:\project\code_interviews\list.h
+	<string.h>
+
+1519373154 source:d:\project\code_interviews\list.c
+	"list.h"
+
+1519436177 source:d:\project\code_interviews\stack.c
+	"stack.h"
+
+1519435027 d:\project\code_interviews\stack.h
+
+1519436753 source:d:\project\code_interviews\queue.c
+
+1519373154 source:d:\project\cslearning\interviews\list.c
+	"list.h"
+
+1519373066 d:\project\cslearning\interviews\list.h
+	<string.h>
+
+1519436930 source:d:\project\cslearning\interviews\main.c
+	<stdio.h>
+	<stdlib.h>
+	"minctest.h"
+	"list.h"
+	"stack.h"
+
+1519367476 d:\project\cslearning\interviews\minctest.h
+	<stdio.h>
+	<math.h>
+	<time.h>
+	<string.h>
+
+1519435027 d:\project\cslearning\interviews\stack.h
+
+1519436177 source:d:\project\cslearning\interviews\stack.c
+	"stack.h"
+
+1519373154 source:d:\project\cslearning\interviews\c\list.c
+	"list.h"
+
+1519373066 d:\project\cslearning\interviews\c\list.h
+	<string.h>
+
+1519436930 source:d:\project\cslearning\interviews\c\main.c
+	<stdio.h>
+	<stdlib.h>
+	"minctest.h"
+	"list.h"
+	"stack.h"
+
+1519367476 d:\project\cslearning\interviews\c\minctest.h
+	<stdio.h>
+	<math.h>
+	<time.h>
+	<string.h>
+
+1519435027 d:\project\cslearning\interviews\c\stack.h
+
+1519436177 source:d:\project\cslearning\interviews\c\stack.c
+	"stack.h"
+

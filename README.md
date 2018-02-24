@@ -3,13 +3,14 @@
 1. CSAPP		深入理解操作系统
 * Language	学习各种语言语言的代码
 * NoteBookForDevelop 编程笔记相关 包括文档 工具汇总和各种博客地址
-* ToolFactory	整理、自己写的工具
+* ToolFactory	整理 + 自己写的工具
+* interviews 面试准备用c等实现的算法
 
 # 资源
 * [计算机开放电子书汇总](https://raw.githubusercontent.com/it-ebooks/it-ebooks-archive/master/README.md)
 * [计算机开放电子书汇总](http://it-ebooks.flygon.net/)
 
-# log
+# git log
 
 * features:	new features are only added to the default branch, this branch accepts any kind of change.
 * bugfix:	bugfixes and security fixes are accepted, new binaries are still released.
