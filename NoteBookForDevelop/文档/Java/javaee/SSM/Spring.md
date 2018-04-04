@@ -8,4 +8,13 @@
 
 # AOP
 
+# 静态资源访问
+```
+<mvc:resources mapping="/static/**" location="static/"/>
+<c:url value="/static/bootstrap/css/bootstrap.css" />
+
+<c:set var="path" value="${pageContext.request.contextPath}"/>
+${path}/static/jquery-3.1.1.min.js
+```
+
 # 测试
