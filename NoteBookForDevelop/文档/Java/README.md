@@ -1,4 +1,6 @@
-# 资源
+# java笔记
+
+## 资源
 * [面试整理-Java综合高级篇（吐血整理）](https://juejin.im/entry/5a2df35a6fb9a0451d416b41)
 * [如何深入学习java](https://www.zhihu.com/question/35436600)
 
@@ -18,7 +20,7 @@
 
 * [JDBC 指南-极客学院](http://wiki.jikexueyuan.com/project/jdbc/)
 
-# java库
+## java库
 * [JDBC](http://wiki.jikexueyuan.com/project/jdbc/introduction.html)
 * [Apache Shiro](http://wiki.jikexueyuan.com/project/jdbc/introduction.html)是一个强大易用的Java安全框架，提供了认证、授权、加密和会话管理等功能
 # 体系结构

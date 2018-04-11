@@ -37,6 +37,7 @@ Files.createFile(Path file);
 Files.createDirectories(Path dir);
 
 ```
+
 ## 文件操作
 * java.nio.file.Files：创建 删除 检查是否存在 读取 写入
 * 随机访问文件java.nio.channels.SeelableByteChannel
@@ -69,3 +70,4 @@ if (linesRead != null) {
 ```
 
 # 流操作
+![io](流.png)
