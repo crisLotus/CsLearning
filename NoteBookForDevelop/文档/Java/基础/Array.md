@@ -1,3 +1,5 @@
+# 创建
+```
 一维：
     String []s = new String[20];
     int []s = new int[20];
@@ -12,3 +14,10 @@
 
     String [][] s;
     s = new String[1][2];
+
+```
+
+# 调整大小
+```
+java.util.Arrays.copyOf(oldArray, newArraySize);
+```
