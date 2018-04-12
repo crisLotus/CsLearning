@@ -1,4 +1,5 @@
 # 资源
+* [spring boot 实践学习案例](https://github.com/JeffLi1993/springboot-learning-example)
 * [SSM优秀项目](https://github.com/mybatis/jpetstore-6)
 * [SSM项目 github](https://github.com/search?utf8=%E2%9C%93&q=maven+ssm&type=)
 * [Spring Framework 5 中文文档](https://www.gitbook.com/book/lfvepclr/spring-framework-5-doc-cn/details)
