@@ -58,9 +58,13 @@ zrangebyscore zset-key 0 800 withscores
 * exec
 
 ### 过期时间
+expire
 
 # source
+## 工具 
+* redis sentine redis的监视工具
 
+## 文档
 * [Redis中文网](http://www.redis.cn/)
 * [Redis 命令参考](http://www.redis.cn/commands.html)
 * [Redis 命令参考](http://redisdoc.com/)
@@ -76,8 +80,6 @@ zrangebyscore zset-key 0 800 withscores
 ## Jedis
 
 ``` java
-package com.test;
-
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
