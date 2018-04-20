@@ -5,16 +5,17 @@
 * 平时工作流程（个人习惯不开机重启）
 	* [wox](https://github.com/Wox-launcher/Wox)可以通过热键打开链接 程序 文件等任何东西，电脑里有了他都可以打开
 	* everything 文件检索
-* [Vagrant](https://www.vagrantup.com/)+[vagrantmanager](https://github.com/lanayotech/vagrant-manager-windows/releases)虚拟机管理工具，用于搭建跨平台测试环境 配合virtualbox或vmare
-* VirtualBox
+* [Vagrant](https://www.vagrantup.com/)+[VirtualBox](https://www.virtualbox.org/)虚拟机+开发环境搭建。由于两个有依赖关系，所以下载之前需要查看vagrant支持的virtualbox的最高版本
 * Genymotion android模拟器
-* **sublime text**
-* pycharm
-* eclipse
-* koala sass
+* **[sublime text](https://www.sublimetext.com/3)**
+* [pycharm](https://www.jetbrains.com/pycharm) pythonide，可以本地激活版本为2017.3.2，更高版本未测试
+* java
+	* [idea](https://www.jetbrains.com/idea/)2017.3.2谢谢
+	* [eclipse](http://www.eclipse.org/downloads/eclipse-packages/)
+* [koala](http://koala-app.com/index-zh.html) sass
 * SourceTree git的图形界面
-* Cmder win下cmd的替代品，分portable版(portable版内置git)和mini版(如果安装了vagrant，可以直接使用vagrant里的mingw64，不用安装gow)
-* shadowsocks
+* [Cmder](http://cmder.net/) win下cmd的替代品，分portable版(portable版内置git)和mini版(如果安装了vagrant，可以直接使用vagrant里的mingw64，不用安装gow)
+* [shadowsocks](https://github.com/shadowsocks/shadowsocks-windows/releases)
 * [xyplorer](https://www.xyplorer.com/) 文件管理，可以给文件加标签
 	* 激活信息1 www.dayanzai.me xy01-ST00-ffc0-b1f0-7036-0a72-sh11-0923
 	* 激活信息2 www.oyksoft.com xy01-1000-3f93-6f16-dc93-ee14-0cc4
@@ -24,7 +25,7 @@
 * [xampp](https://www.apachefriends.org/download.html)+mysqlWorkbench+navcat
 * AxureRP
 * ida pro 逆向工程
-* Veracrypt 磁盘加密 虚拟磁盘加密工具
+* [Veracrypt](https://www.veracrypt.fr/en/Downloads.html) 磁盘加密 虚拟磁盘加密工具
 * IrfanView 图片查看软件 中文
 * [LICEcap](http://www.cockos.com/licecap/):录屏gif图
 * [markdown--typora](http://www.typora.io/#windows)
@@ -43,21 +44,21 @@
 * office
 * [ShareX](https://github.com/ShareX/ShareX/)
 * understand Sourcetrail 代码阅读利器
-* keepass+坚果云
-* zotero 文献管理
-* UltraISO 启动盘制作
-* VeraCrypt 加密盘
+* [keepass](https://keepass.info/)+[坚果云](https://www.jianguoyun.com/)
+* [zotero](https://www.zotero.org/) 文献管理
+* [UltraISO](https://cn.ultraiso.net/xiazai.html) 启动盘制作
 * [power bi](https://powerbi.microsoft.com/en-us/downloads/)商业智能，excel格式文件生成图表
 
 * chrome 插件
-	* [SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega/releases)
+	* [这个地址下载方法最简单](https://www.crx4chrome.com/)
+	* [究极下载方法](https://segmentfault.com/q/1010000002574198)
+	* [SwitchyOmega](https://github.com/FelisCatus/SwitchyOmega/releases)你懂的
 	* [Pocket]()
-	* [广告终结者]()
-	* [zotero]()
 	* [有道词典]()
 	* [滴答清单]()
 * tex
-	* [MiKTeX](https://miktex.org/portable) tex编译器
+	* [MiKTeX](https://miktex.org/portable) tex编译器，试了几个，在我这都不行。为了不折腾，用的这个的portable版
+	* [texmaker](http://www.xm1math.net/texmaker/assets/files/)tex编辑器，配合上边这个，还是可以的
 	* [在线latex](https://cn.sharelatex.com/)
 * uml
 	* [文本形式化uml](http://www.ffnn.nl/pages/articles/media/uml-diagrams-using-graphviz-dot.php)
@@ -66,7 +67,7 @@
 # linux平台
 
 * linux基本命令
-* Atom github出品编辑器
+* Atom github出品编辑器（sublim text在这有中文编辑bug，很折腾）
 * Git 版本控制
 * Pycharm python ide
 * Wireshark 网络抓包工具（官方支持中文界面）
