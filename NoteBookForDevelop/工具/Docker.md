@@ -16,7 +16,7 @@
 enjoy
 * [共享目录想挂在非user目录，则需要配置一下](https://www.jianshu.com/p/2ecef54c1e33),为了方便，配置如下
 	* 在virtualbox中创建共享目录，目录为d盘，共享名为D
-	* docker-machine ssh default 'sudo mkdir -p /D && sudo mount -t vboxsf D /D && ln -s /D /d'
+	* docker-machine ssh default 'sudo mkdir -p /D && sudo mount -t vboxsf D /D && sudo ln -s /D /d'
 
 # 使用方法
 ## 获得image
@@ -38,6 +38,7 @@ enjoy
 	* --name 指定容器的名字
 	* -v 将宿主机的目录作为卷，挂载到容器中
 		* docker run -d -p 80 --name website -v $PWD/website:/var/www/html/website user/img nginx
+	* --mount type=bind,source=/src/webapp,target=/opt/webapp -v的替代品
 	* --volumes-from 从其他容器中加载所有卷
 		* docker run -d -P --name website --volumes-from sample_comtainner user/img
 		* [共享目录想挂在非c/user目录，则需要配置一下](https://www.jianshu.com/p/2ecef54c1e33)，本问安装方法中说明如何配置
@@ -85,10 +86,11 @@ enjoy
 * docker commit
 * docker build
 	* docker build . # .表示在当前目录下找dockerfile
-	* docker build -t="user/imagename:v1" git仓库 ## 在指定网络位置寻找dockerfile
+	* docker build -t "user/imagename:v1" git仓库 ## 在指定网络位置寻找dockerfile
 	* docker history <imagename> # 如何创建的镜像
 
 ### Dockerfile指令
+* MAINTAINER Exfly "exfly@outlook.com"
 * RUN 构建镜像时运行
 * CMD 启动容器时运行；多个CMD指令，最后一个生效，想启动多个进程，可以考虑Supervisor，本质上CMD转化为ENTRYPOINT进行执行。
 * EXPOSE 向外暴露端口
@@ -127,6 +129,10 @@ enjoy
 l
 	* /var/lib/docker/volumes/82ab67296dfb6c.../_ data
 
+# docker-machine 使用
+* docker-machine create --driver virtualbox my-default 使用dock-machine创建宿主机
+* eval "$(docker-machine env --shell=bash my-default)" 获得刚创建宿主机的shell
+
 ## redis后端集群
 * master docker run -d -h redis_primary --name redis_primary user/imgname
 * cluster docker run -f -h redis_replical --name redis_replical --link redis_primary:redis_primary user/imgname
@@ -142,3 +148,4 @@ l
 * [阮一峰-docker微服务，讲解如何配置img镜像](http://www.ruanyifeng.com/blog/2018/02/docker-wordpress-tutorial.html)
 * [修改默认仓库](https://www.kar-chan.com/?p=5906)
 * [http://book.itmuch.com/](使用Spring Cloud与Docker实战微服务)
+* [Various Dockerfiles I use on the desktop and on servers](https://github.com/jessfraz/dockerfiles)
