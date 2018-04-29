@@ -1,9 +1,17 @@
 * [shell编程菜鸟教程](http://www.runoob.com/linux/linux-shell.html)
 * [shell编程：c语言中文网](http://c.biancheng.net/cpp/view/6994.html)
+
 ## 常用标量
 * stdin 0
 * stdout 1
 * stderr 2
+
+## 环境变量
+* export PATH="$PATH:NewPath"
+* 默认具有的环境变量 HOME PWD USER UID SHELL
+* $SHELL==$0
+* PS1="\e[1;31msh\e[1;0m>"
+* 用函数添加环境变量 setpath(){ [ -d "$2" ] && eval $1=\"$2'\$$1\" $$ export $1;} # 使用 setpath PATH /path
 
 ## 变量
 
@@ -51,6 +59,7 @@ unset variable_name
   valuen=${array_name[n]}
   使用@符号可以获取数组中的所有元素，例如：
     echo ${array_name[@]}
+    echo ${array_name[*]}
 
 获取数组的长度
     获取数组长度的方法与获取字符串长度的方法相同，例如：
@@ -60,11 +69,34 @@ unset variable_name
     length=${#array_name[*]}
     # 取得数组单个元素的长度
     lengthn=${#array_name[n]}
+关联数组
+    declare -A ass_array
+    ass_array=([index1]=val1 [index2]=val2)
+    ass_array[index1]=value1
+    列出索引
+        echo ${!ass_array[*]}
+        echo ${!ass_array[@]}
 
 Shell 注释
     以"#"开头的行就是注释，会被解释器忽略。
     sh里没有多行注释，只能每一行加一个#号
 
+```
+
+## 输入/输出重定向 && 文件描述符
+
+```
+命令  说明
+command > file  将输出重定向到 file。
+command < file  将输入重定向到 file。
+command >> file 将输出以追加的方式重定向到 file。
+n > file    将文件描述符为 n 的文件重定向到 file。
+n >> file   将文件描述符为 n 的文件以追加的方式重定向到 file。
+n >& m  将输出文件 m 和 n 合并。
+n <& m  将输入文件 m 和 n 合并。
+<< tag  将开始标记 tag 和结束标记 tag 之间的内容作为输入。
+
+pgrep -x httpd >/dev/null 2>&1 # 将标准输出重定向到null，标准错误输出重定向到输出
 ```
 
 ## Shell 传递参数
@@ -83,6 +115,7 @@ $$	脚本运行的当前进程ID号
 $!	后台运行的最后一个进程的ID号
 $@	与$*相同，但是使用时加引号，并在引号中返回每个参数。
 如"$@"用「"」括起来的情况、以"$1" "$2" … "$n" 的形式输出所有参数。
+$*与$@比较： $*扩展为"$1c$2c$3" ;$@ 扩展为"$1" "$2" "$3"
 $-	显示Shell使用的当前选项，与set命令功能相同。
 $?	显示最后命令的退出状态。0表示没有错误，其他任何值表明有错误。
 ```
@@ -153,6 +186,8 @@ str	检测字符串是否为空，不为空返回 true。	[ $a ] 返回 true。
 ```
 
 ## echo
+echo -e "t\tt" == echo -e 't\tt'
+echo -e "\e[1;31mIt's me \e[1;0m"  # \e[1;31m之后的全变颜色，用\e[1;0m恢复原来的颜色
 ```
 显示命令执行结果
   echo `date`
@@ -231,25 +266,23 @@ fi
 if condition
 then
     command1
-    command2
-    ...
-    commandN
 else
     command
 fi
-if condition
-then
-    command1
-    command2
-    ...
-    commandN
-else
-    command
-fi
+
+for item in $date;
+do
+    echo "item\n"
+done
+while condition
+do
+    echo "item\n"
+done
 ```
 
 ## 函数
 ```
+function fname(){}
 funWithParam(){
     echo "第一个参数为 $1 !"
     echo "第二个参数为 $2 !"
@@ -258,6 +291,7 @@ funWithParam(){
     echo "第十一个参数为 ${11} !"
     echo "参数总数有 $# 个!"
     echo "作为一个字符串输出所有参数 $* !"
+    echo "作为一个字符串输出所有参数 $@ !"
 }
 funWithParam 1 2 3 4 5 6 7 8 9 34 73
 funWithParam(){
@@ -272,33 +306,9 @@ funWithParam(){
 funWithParam 1 2 3 4 5 6 7 8 9 34 73
 ```
 
-## 输入/输出重定向
 
-```
-命令	说明
-command > file	将输出重定向到 file。
-command < file	将输入重定向到 file。
-command >> file	将输出以追加的方式重定向到 file。
-n > file	将文件描述符为 n 的文件重定向到 file。
-n >> file	将文件描述符为 n 的文件以追加的方式重定向到 file。
-n >& m	将输出文件 m 和 n 合并。
-n <& m	将输入文件 m 和 n 合并。
-<< tag	将开始标记 tag 和结束标记 tag 之间的内容作为输入。
-
-命令	说明
-command > file	将输出重定向到 file。
-command < file	将输入重定向到 file。
-command >> file	将输出以追加的方式重定向到 file。
-n > file	将文件描述符为 n 的文件重定向到 file。
-n >> file	将文件描述符为 n 的文件以追加的方式重定向到 file。
-n >& m	将输出文件 m 和 n 合并。
-n <& m	将输入文件 m 和 n 合并。
-<< tag	将开始标记 tag 和结束标记 tag 之间的内容作为输入。
-
-pgrep -x httpd >/dev/null 2>&1 # 将标准输出重定向到null，标准错误输出重定向到输出
-```
-
-## 文件包含
+## shell文件
+1. chmod a+x script.sh
 ```
 #!/bin/bash
 # author:菜鸟教程
@@ -309,3 +319,20 @@ pgrep -x httpd >/dev/null 2>&1 # 将标准输出重定向到null，标准错误�
 
 echo "菜鸟教程官网地址：$url"
 ```
+2. 每个命令或命令序列 分号或换行符分割
+3. # 为注释
+4. bash -x src.sh # 调试功能 set -x 和 set +x进行部分调试
+
+## 时间 日期
+```
+date 显示当前时间
+
+start=$(date +%s);sleep 1;end=$(date +%s);d=$((end-start));echo $d
+time <scriptpath>
+```
+
+## Linux命令常用的应用
+* pgrep bash 获得bash的PID
+* cat /proc/1/environ 获得对应PID的环境变量 
+* tr 替换命令
+* cat /proc/1/environ | tr '\0' '\n'每行一个键值对
