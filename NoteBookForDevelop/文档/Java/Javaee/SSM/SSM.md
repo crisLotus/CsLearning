@@ -10,6 +10,11 @@
 
 # 一些知识
 * [SSM分层](http://blog.csdn.net/lutianfeiml/article/details/51864160)
+	* entity
+	* mapper(dao)
+	* service
+		* impl
+	* controller
 * [SSM中的一些概念的讲解](http://blog.csdn.net/gywtzh0889/article/details/53010563)
 * [SSMservice测试](http://blog.csdn.net/uq_jin/article/details/51541971)
 * [SSM Websocket](https://www.jianshu.com/p/f0cbfc1f0a50)
