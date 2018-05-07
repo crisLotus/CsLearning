@@ -16,6 +16,7 @@
 
 * 项目学习bootdo
 	* https://github.com/liu-peiyu/SpringBootAdmin作为自己的starter
+	* https://gitee.com/renrenio/renren-security
 	* https://gitee.com/lcg0124/bootdo
 	* https://github.com/lcg0124/bootdo
 * 另一个项目
