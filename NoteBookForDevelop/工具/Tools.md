@@ -63,6 +63,16 @@
 * uml
 	* [文本形式化uml](http://www.ffnn.nl/pages/articles/media/uml-diagrams-using-graphviz-dot.php)
 	* [starUML](http://staruml.io/download)
+* 工作
+	* [xshell + xftp](https://www.portablesoft.org/xshell-xftp-legacy-versions/)
+	* [ALTRun](https://github.com/etworker/ALTRun)[ALMRun](https://github.com/chenall/ALMRun)
+	* [foxmail](http://www.foxmail.com/)
+	* [teamviewer](https://www.teamviewer.com/en/download/windows/)
+	* [notepad++](https://notepad-plus-plus.org/)
+	* [maven](https://maven.apache.org/download.cgi)
+	* [git-portable](https://git-scm.com/download/win)
+	* [svn](https://tortoisesvn.net/downloads.zh.html)
+	* viso
 
 # linux平台
 
