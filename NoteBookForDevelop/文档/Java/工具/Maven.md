@@ -1,5 +1,6 @@
 # maven rep
 * [依赖坐标搜索](http://search.maven.org/)
+* [maven实战]
 
 ## 最佳实践
 * bin下有mvn和mvnDebug(运行mvn时开始debug)
