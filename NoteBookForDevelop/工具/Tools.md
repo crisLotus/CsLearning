@@ -73,6 +73,10 @@
 	* [git-portable](https://git-scm.com/download/win)
 	* [svn](https://tortoisesvn.net/downloads.zh.html)
 	* viso
+	* 工作流
+		* java使用eclipse，阅读代码时候，使用understand对代码进行分析，之后跳回eclipse进行代码编写活动
+		* 由于eclipse对代码进行导入maven时候，需要下载包，每次都会出现大量错误。为了减少错误的发生，暂时如此工作流进行
+		* 暂时感觉还可以
 
 # linux平台
 
