@@ -6,6 +6,12 @@
 * 控制反转 IOC
 * AOP(Aspect Oriented Programming) 意为：面向切面编程
 
+# 
+@Component：一个泛化的概念，表示一个组件（Bean），可作用在任何层次
+@Controller：用于对Controller实现类进行标注，目前该功能与Component相同
+@Repository：用于对DAO实现类进行标注
+@Service：用于对Service实现类进行标注，目前该功能与Component相同
+
 # AOP
 
 # 静态资源访问
