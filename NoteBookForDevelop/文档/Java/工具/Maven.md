@@ -71,3 +71,8 @@
 
 ## 自己的心得
 * 使用符号链接，将~/.m2/repository放到其他盘，防止C盘占用过大 mklink /D ~/.m2/repository path/to/yours
+
+## 冲突管理
+* 出classnotfound异常，先查看所在包是否被导入了，没被导入看是否在文件系统里有，有的话删除，没有的话继续下一步
+* 到pom文件的dependency hierarchy查看包是否生效，注意查看omitted for conflict
+* 查找到冲突库的版本后，从低级别版本开始exclude，逐渐尝试每一个版本，知道不出现冲突
