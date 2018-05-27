@@ -12,7 +12,7 @@
 
 # 安装方法
 * 下载[docker-toolbox]()
-* mklink .docker D:\Software\Dev\Docker\.docker # 加软li为了不把c盘撑炸
+* mklink .docker D:\Software\Dev\Docker\.docker # 加软连接为了不把c盘撑炸
 enjoy
 * [共享目录想挂在非user目录，则需要配置一下](https://www.jianshu.com/p/2ecef54c1e33),为了方便，配置如下
 	* 在virtualbox中创建共享目录，目录为d盘，共享名为D
@@ -69,7 +69,7 @@ enjoy
 * docker inspect <docker names> 指定容器的状态信息json
 
 * docker attach 重新附着到容器会话上
-* docker exec -t -i <docker name> COMMAND
+* docker exec -t -i <docker name> COMMAND 在指定的容器中运行命令
 
 ### 数据卷volumes
 * [docerinfo文档](http://www.dockerinfo.net/%E6%95%B0%E6%8D%AE%E5%8D%B7volumes)
@@ -107,7 +107,7 @@ enjoy
 
 ### docker-compose
 
-# docker toolbox 配置加速
+# docker toolbox 配置加速 镜像
 * docker-machine ssh <machine-name>登录虚拟机
 * 修改/var/lib/boot2docker/profile文件，将--registry-mirror=<your accelerate address>添加到EXTRA_ARGS中
 * sudo /etc/init.d/docker restart 重启Docker
