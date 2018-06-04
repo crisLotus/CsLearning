@@ -45,3 +45,4 @@
 * https://github.com/prontera/spring-cloud-rest-tcc
 * https://github.com/eacdy/spring-cloud-study
 *  export PATH=$PAHT:<PATH 1>
+* [详细介绍原理 资料](https://blog.csdn.net/forezp/article/details/70148833)

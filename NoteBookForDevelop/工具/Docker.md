@@ -11,11 +11,10 @@
 * [容器间数据共享](http://dockone.io/article/128)
 
 # 安装方法
-* 下载[docker-toolbox]()
-* mklink .docker D:\Software\Dev\Docker\.docker # 加软连接为了不把c盘撑炸
-enjoy
+* 下载[docker-toolbox](https://docs.docker.com/toolbox/toolbox_install_windows/)
+* cd /d %USERPROFILE% && mklink .docker D:\Software\Dev\Docker\.docker # 在win系统的命令行 加软连接为了不把c盘撑炸 
 * [共享目录想挂在非user目录，则需要配置一下](https://www.jianshu.com/p/2ecef54c1e33),为了方便，配置如下
-	* 在virtualbox中创建共享目录，目录为d盘，共享名为D
+	* 在virtualbox 设置中创建共享目录，路径为d盘，共享名称为D
 	* docker-machine ssh default 'sudo mkdir -p /D && sudo mount -t vboxsf D /D && sudo ln -s /D /d'
 
 # 使用方法
@@ -32,16 +31,17 @@ enjoy
 * docker run -d -P <img-name> python app.py 启动容器
 	* -d 后台运行容器
 	* -P 全端口映射
-	* -p 127.0.0.1:80:80 指定映射ip和端口
+	* -p 127.0.0.1:80:80 指定映射ip和端口，可以直接指定类似8080:8080形式
 	* -i stdin开启
 	* -t 为要创建的容器创建伪tty
 	* --name 指定容器的名字
 	* -v 将宿主机的目录作为卷，挂载到容器中
 		* docker run -d -p 80 --name website -v $PWD/website:/var/www/html/website user/img nginx
 	* --mount type=bind,source=/src/webapp,target=/opt/webapp -v的替代品
+		* docker run -d -p 80 --name website --mount type=bind,source=$PWD/website,target=/var/www/html/website user/img nginx
 	* --volumes-from 从其他容器中加载所有卷
 		* docker run -d -P --name website --volumes-from sample_comtainner user/img
-		* [共享目录想挂在非c/user目录，则需要配置一下](https://www.jianshu.com/p/2ecef54c1e33)，本问安装方法中说明如何配置
+		* [共享目录想挂在非c/user目录，则需要配置一下](https://www.jianshu.com/p/2ecef54c1e33)，本问安装方法中记录了如何配置
 	* -e 设置环境变量
 	* -h 指定主机名，并可以被本地DNS解析
 	* -u 设置运行的用户，可以覆盖USER指定的值
@@ -49,6 +49,7 @@ enjoy
 		* docker run -p 8080:8080 --name jenkeins --privileged -d local/jenkeins
 	* **--rm** 容器进程完毕后，自动删除容器
 * docker stop <docker names>
+	* docker stop `docker ps -q` 停止所有的容器
 * docker start <docker names>
 * docker rm <docker names>
 	* docker rm `docker ps -a -q` 删除所有的容器
@@ -125,8 +126,7 @@ enjoy
 	* docker run -d -P --name apache --volumes-from jekyll_blog local/apache
 
 * 备份卷
-	* docker run --rm --volumes-from jekyll_blog -v $PWD:/backup ubuntu tar cvf /backup/jekyll_blog_backup.tar /var/www/htm
-l
+	* docker run --rm --volumes-from jekyll_blog -v $PWD:/backup ubuntu tar cvf /backup/jekyll_blog_backup.tar /var/www/html
 	* /var/lib/docker/volumes/82ab67296dfb6c.../_ data
 
 # docker-machine 使用
