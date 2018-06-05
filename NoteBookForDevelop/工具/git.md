@@ -17,3 +17,7 @@
 build/               # 忽略所有的 build/ 目录下文件
 doc/*.txt           # 忽略如 doc/notes.txt, 但是不忽略如 doc/server/arch.txt
 ```
+
+# 其他
+* [git cheat sheet](https://github.com/flyhigher139/Git-Cheat-Sheet)
+* ![git-flow-commands-without-flow](https://github.com/flyhigher139/Git-Cheat-Sheet/raw/master/Img/git-flow-commands-without-flow.png)
