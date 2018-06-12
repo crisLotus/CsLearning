@@ -76,7 +76,7 @@ html {
 ```
 
 ## openresty
-
+content_by_lua_file
 
 # 参考
 深入理解Nginx模块开发与架构解析第2版LinuxUnix技术丛书
